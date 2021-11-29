@@ -1,38 +1,38 @@
 {% extends 'base/base.html' %}
 {% load static %}
 {% block content %}
-
 <div class="container">
-    <div class="d-flex flex-wrap align-items-center justify-content-around border-bottom">
+    <div class="border-bottom"></div>
+    <div class="box mt-3">
+        <div class="row gx-3 mt-4 justify-content-start">
+            <div class="col-sm-12 col-md-12 col-lg-6">
+                <img src="{% static 'img/slide1.jpg' %}" alt="" width="100%" style="border-radius: 10px;">
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="item">
+                    <img src="{% static 'img/2.jpg' %}" alt="" width="100%" style="border-radius: 10px; margin-bottom: 10%;">
+                </div>
+                <div class="col mt-2">
+                    <div class="item">
+                        <img src="{% static 'img/1.jpg' %}" alt="" width="100%" style="border-radius: 10px;">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="item">
+                    <img src="{% static 'img/1.jpg' %}" alt="" width="100%" style="border-radius: 10px;margin-bottom: 10%;">
+                </div>
+                <div class="col mt-2">
+                    <div class="item">
+                        <img src="{% static 'img/2.jpg' %}" alt="" width="100%" style="border-radius: 10px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box" style="margin-top: 2%;">
 
+        </div>
     </div>
-        <svg class="svg-container" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="100%" height="250" preserveAspectRatio="none" viewBox="0 0 1116 250">
-            <g mask="url(&quot;#SvgjsMask1062&quot;)" fill="none">
-                    <path d="M4 250L254 0L498.5 0L248.5 250z" fill="url(#SvgjsLinearGradient1063)"></path>
-                    <path d="M193.14000000000001 250L443.14 0L623.14 0L373.14 250z" fill="url(#SvgjsLinearGradient1063)"></path>
-                    <path d="M376.28000000000003 250L626.28 0L774.78 0L524.78 250z" fill="url(#SvgjsLinearGradient1063)"></path>
-                    <path d="M579.4200000000001 250L829.4200000000001 0L1052.92 0L802.9200000000001 250z" fill="url(#SvgjsLinearGradient1063)"></path>
-                    <path d="M1084 250L834 0L783 0L1033 250z" fill="url(#SvgjsLinearGradient1064)"></path>
-                    <path d="M913.86 250L663.86 0L399.86 0L649.86 250z" fill="url(#SvgjsLinearGradient1064)"></path>
-                    <path d="M727.72 250L477.72 0L401.22 0L651.22 250z" fill="url(#SvgjsLinearGradient1064)"></path>
-                    <path d="M547.5799999999999 250L297.5799999999999 0L209.07999999999993 0L459.0799999999999 250z" fill="url(#SvgjsLinearGradient1064)"></path>
-                    <path d="M918.4807187159162 250L1116 52.4807187159162L1116 250z" fill="url(#SvgjsLinearGradient1063)"></path>
-                    <path d="M0 250L197.5192812840838 250L 0 52.4807187159162z" fill="url(#SvgjsLinearGradient1064)"></path>
-            </g>
-            <defs>
-                    <mask id="SvgjsMask1062">
-                    <rect width="100%" height="250" fill="#ffffff"></rect>
-                    </mask>
-                    <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="SvgjsLinearGradient1063">
-                    <stop stop-color="rgba(14, 248, 46, 0.2)" offset="0"></stop>
-                    <stop stop-opacity="0" stop-color="rgba(14, 248, 46, 0.2)" offset="0.66"></stop>
-                    </linearGradient>
-                    <linearGradient x1="100%" y1="100%" x2="0%" y2="0%" id="SvgjsLinearGradient1064">
-                    <stop stop-color="rgba(14, 248, 46, 0.2)" offset="0"></stop>
-                    <stop stop-opacity="0" stop-color="rgba(14, 248, 46, 0.2)" offset="0.66"></stop>
-                    </linearGradient>
-            </defs>
-        </svg>
 </div>
 
 {% endblock content %}
