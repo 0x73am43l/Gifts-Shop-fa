@@ -1,43 +1,51 @@
-
 {% load static %}
-<header class="p-3 mb-3" id="header-nav">
+<header class="p-2 mb-1" id="header-nav">
     <div class="container">
-    <div class="d-flex flex-wrap align-items-center justify-content-around">
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0">
-        <li><a href="#"><img class="profile-radius" src="{% static 'img/logo.png' %}" alt="" width="42" height="42" style="margin-left: 10px;"></a></li>
-        <li><a href="#" class="nav-link px-2 link-secondary text-velo hover-underline-animation">صفحه اصلی</a></li>
-        <li><a href="#" class="nav-link px-2 link-secondary text-velo">وبلاگ</a></li>
-        <li><a href="#" class="nav-link px-2 link-secondary text-velo">پشتیبانی</a></li>
-        <li><a href="#" class="nav-link px-2 link-secondary text-velo">پیگیری سفارش</a></li>
-        <li><a href="#" class="nav-link px-2 link-secondary text-velo">ارتباط باما</a></li>
-        <!-- <li><a href="#" class="donate nav-link px-2 link-purple-200">حمایت 💜</a></li> -->
-        </ul>
+        <div class="d-flex align-content-start flex-wrap menu-container m-2">
+            <div class="logo d-flex justify-content-sm-end"><a href="/"><img src="{% static 'img/logo1.png' %}" alt="logo" width="42" height="42" style="margin-left: 10px;" aria-label="logo"></a></div>
+            <ul class="nav col-sm-8 col-md-9 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0">
+                <li><a href="#" class="d-none d-lg-block nav-link px-2 link-secondary text-velo hover-underline-animation">صفحه اصلی</a></li>
+                <li class="dropdown d-none d-lg-block">
+                    <a class="nav-link dropdown-toggle text-velo" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        گیفت کارت
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu bg-black" aria-labelledby="navbarDarkDropdownMenuLink">
+                        <li><a class="dropdown-item text-velo" href="#">استیم</a></li>
+                        <li><a class="dropdown-item text-velo" href="#">آمازون</a></li>
+                        <li><a class="dropdown-item text-velo" href="#">گوگل پلی</a></li>
+                        <li><a class="dropdown-item text-velo" href="#">نتفلیکس</a></li>
+                        <li><a class="dropdown-item text-velo" href="#">بلیزارد</a></li>
 
-        <div class=" d-flex align-items-center justify-content-end">
-        <button type="button" class="btn btn-outline-secondary link-green position-relative" style="border: solid 1px #1cd67f;">
-            <i class="bi bi-cart-fill"></i>
-            <span class="position-absolute top-0 start-0 translate-middle p-2 bg-success rounded-circle">
-              <span class="visually-hidden">New alerts</span>
-            </span>
-          </button>
-        <span class="mx-2 ps-3 pe-5 py-1 badge rounded-pill" style="border: solid 2px #1cd67f"> <img src="{% static 'img/game-controller-outline.svg' %}" class="me-1"> 129</span>
-
-        <div class=mx-2 dropdown text-end">
-            <a href="#" class="d-block link-green text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="https://avatars.githubusercontent.com/u/13575387?v=4" alt="avatar" width="32" height="32" class="rounded-circle" style="border: solid 2px #1cd67f;">
-            </a>
-            <ul class="dropdown-menu text-small bg-black" aria-labelledby="dropdownUser1" style="border: solid 1px #1cd67f;">
-            <li><a class="dropdown-item text-velo" href="#">پروفایل</a></li>
-            <li><a class="dropdown-item text-velo" href="#">تیکت</a></li>
-            <li><a class="dropdown-item text-velo" href="#">تنظیمات</a></li>
-            <li>
-                <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item text-velo" href="#">خروج</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="d-none d-lg-block nav-link px-2 link-secondary text-velo">پشتیبانی</a></li>
+                <li><a href="#" class="d-none d-lg-block nav-link px-2 link-secondary text-velo">پیگیری سفارش</a></li>
+                <li><a href="#" class="d-none d-lg-block nav-link px-2 link-secondary text-velo">ارتباط باما</a></li>
             </ul>
-        </div>
-        </div>
-    </div>
-    </div>
 
+            <div class="d-flex justify-content-start align-items-start">
+                <button type="button" class="d-none d-lg-block d-md-block btn btn-outline-secondary cart-btn link-green position-relative">
+                    <i class="bi bi-cart-fill"></i>
+                    <span class="position-absolute top-0 start-0 translate-middle p-1 bg-badge rounded-circle">
+                        <span class="visually-hidden">New alerts</span>
+                    </span>
+                </button>
+                <span class="d-none d-lg-block ms-2 ps-3 pe-5 py-1 badge rounded-pill user-point"> <img src="{% static 'img/game-controller-outline.svg' %}" alt="User_Point" class="me-1"> 129</span>
+                <div class=mx-2 dropdown text-end">
+                    <a href="#" class="d-none d-lg-block d-md-block link-green text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="{% static 'img/avatar.jpg' %}" alt="avatar" width="36" height="36" class="rounded-circle user-avatar">
+                    </a>
+                    <ul class="dropdown-menu text-small bg-black user-menu-dropdown" aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item text-velo" href="#">پروفایل</a></li>
+                        <li><a class="dropdown-item text-velo" href="#">تیکت</a></li>
+                        <li><a class="dropdown-item text-velo" href="#">تنظیمات</a></li>
+                        <li>
+                        <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-velo" href="#">خروج</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
