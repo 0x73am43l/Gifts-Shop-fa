@@ -13,10 +13,10 @@
     <link rel="shortcut icon" type="image/icon" href="{% static 'img/favicon.ico' %}"/>
 </head>
 <body>
-    <div id="scroll-progress"></div>
+    <!-- <div id="scroll-progress"></div> -->
     {% include 'base/navbar.html' %}
     {% block content %}{% endblock content %}
-
+    {% include 'base/footer.html' %}
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'js/scripts.js' %}"></script>
 </body>
