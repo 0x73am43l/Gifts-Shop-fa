@@ -6,7 +6,35 @@
     <div class="box mt-3" id="header">
         <div class="row gx-3 mt-2 justify-content-start g-2">
             <div class="col-sm-12 col-md-12 col-lg-6">
-                <img src="{% static 'img/Header/slide1.jpg' %}" alt="" width="100%" style="border-radius: 10px;">
+                <!-- <img src="{% static 'img/Header/slide1.jpg' %}" alt="" width="100%" style="border-radius: 10px;"> -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="card-image">
+                          <img src="{% static 'img/Header/s-four.jpg' %}" alt="Image Slider">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="card-image">
+                          <img src="{% static 'img/Header/s-five.jpg' %}" alt="Image Slider">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="card-image">
+                          <img src="{% static 'img/Header/s-three.jpg' %}" alt="Image Slider">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Scrollbar -->
+                    <div class="swiper-button-next">
+                      <i class="fas fa-chevron-circle-left arrow-icon"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                      <i class="fas fa-chevron-circle-right arrow-icon"></i>
+                    </div>
+                </div>
             </div>
             <div class="col-sm-6 col-md-6 col-lg-3">
                 <div class="item">
@@ -20,7 +48,7 @@
             </div>
             <div class="col-sm-6 col-md-6 col-lg-3">
                 <div class="item">
-                    <img src="{% static 'img/Header/1.jpg' %}" alt="" width="100%" style="border-radius: 10px;margin-bottom: 10%;">
+                    <img src="{% static 'img/Header/3.jpg' %}" alt="" width="100%" style="border-radius: 10px;margin-bottom: 10%;">
                 </div>
                 <div class="col mt-2">
                     <div class="item">
