@@ -1,10 +1,10 @@
 {% load static %}
-<header class="p-2 mb-1" id="header-nav">
+<header class="p-2 mb-1">
     <div class="container">
-        <div class="d-flex align-content-start flex-wrap menu-container m-2">
+        <div class="d-flex justify-content-between menu-container">
             <div class="logo d-flex justify-content-sm-end"><a href="/"><img src="{% static 'img/logo.png' %}" alt="logo" width="42" height="42" style="margin-left: 10px;" aria-label="logo"></a></div>
             <ul class="nav col-sm-8 col-md-9 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0">
-                <li><a href="#" class="d-none d-lg-block nav-link px-2 link-secondary text-velo hover-underline-animation">صفحه اصلی</a></li>
+                <li><a href="/" class="d-none d-lg-block nav-link px-2 link-secondary text-velo hover-underline-animation">صفحه اصلی</a></li>
                 <li class="dropdown d-none d-lg-block">
                     <a class="nav-link dropdown-toggle text-velo" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         گیفت کارت
@@ -23,8 +23,8 @@
                 <li><a href="#" class="d-none d-lg-block nav-link px-2 link-secondary text-velo">ارتباط باما</a></li>
             </ul>
 
-            <div class="d-flex justify-content-start align-items-start">
-                <button type="button" class="d-none d-lg-block d-md-block btn btn-outline-secondary cart-btn link-green position-relative">
+            <div class="d-flex justify-content-sm-start">
+                <button type="button" class="d-block btn btn-outline-secondary cart-btn link-green position-relative">
                     <i class="bi bi-cart-fill"></i>
                     <span class="position-absolute top-0 start-0 translate-middle p-1 bg-badge rounded-circle">
                         <span class="visually-hidden">New alerts</span>
@@ -47,7 +47,9 @@
                     </ul>
                 </div>
                 {% else %}
-                    <a href="{% url 'login' %}" class="btn btn-outline-success" role="button" style="margin-left: 4px;">ورود</a>
+                <div class="justify-content-sm-start">
+                    <a href="{% url 'login' %}" class="btn btn-outline-success mr-10" role="button" style="margin-left: 10px;margin-right: 10px;margin-top: 2px;">ورود</a>
+                </div>
                 {% endif %}
             </div>
         </div>
