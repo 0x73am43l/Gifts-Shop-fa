@@ -3,5 +3,43 @@
 {% block content %}
 <div class="container">
     <div class="border-bottom"></div>
+    <div class="row justify-content-center">
+        <div class="col-lg-4 col-sm-8 col-md-8">
+            <div class="box mt-3 pt-2" id="box_shadow" style="width: 100%; height: 500px;">
+                <form>
+                    <div class="mb-2">
+                      <label for="exampleInputEmail1" class="form-label text-velo text-small">نام کاربری :</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-2">
+                      <label for="exampleInputPassword1" class="form-label text-velo text-small">کلمه عبور :</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" style="text-align: left;">
+                    </div>
+                    <div class="mb-4 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">منو به خاطر داشته باش</label>
+                    </div>
+                    <div class="d-grid gap-2 mb-4">
+                        <button class="btn btn-success" type="button">ورود</button>
+                    </div>
+                    <div class="d-grid gap-2 mb-4">
+                        <button class="btn btn-danger" type="button">ورود با گوگل</button>
+                    </div>
+                    <div class="d-grid gap-2 mb-4">
+                        <button class="btn btn-primary" type="button">ورود با استیم</button>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <span><a href="">گذرواژه رو فراموش کردم!</a></span>
+                        </div>
+                        <div class="col">
+                            <span><a href="">ثبت نام ;)</a></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock content %}
