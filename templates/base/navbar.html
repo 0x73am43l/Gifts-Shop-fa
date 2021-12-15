@@ -9,7 +9,7 @@
                     <a class="nav-link dropdown-toggle text-velo" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         گیفت کارت
                     </a>
-                    <ul class="dropdown-menu dropdown-menu bg-black " aria-labelledby="navbarDarkDropdownMenuLink">
+                    <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
                         <li><a class="dropdown-item text-velo hover-underline-animation" href="#"><span><i class="bi bi-steam"></i></span>استیم</a></li>
                         <li><a class="dropdown-item text-velo hover-underline-animation" href="#"><span><i class="bi bi-cart4"></i></span>آمازون</a></li>
                         <li><a class="dropdown-item text-velo hover-underline-animation" href="#"><span><i class="bi bi-google"></i></span>گوگل پلی</a></li>
@@ -18,17 +18,20 @@
 
                     </ul>
                 </li>
-                <li><a href="#" class="d-none d-lg-block nav-link px-2 link-secondary text-velo">پشتیبانی</a></li>
-                <li><a href="#" class="d-none d-lg-block nav-link px-2 link-secondary text-velo">پیگیری سفارش</a></li>
+                <li><a href="#" class="d-none d-lg-block nav-link px-2 link-secondary text-velo">وبلاگ</a></li>
+                <li><a href="{% url 'terms' %}" class="d-none d-lg-block nav-link px-2 link-secondary text-velo">قوانین</a></li>
                 <li><a href="#" class="d-none d-lg-block nav-link px-2 link-secondary text-velo">ارتباط باما</a></li>
             </ul>
 
             <div class="d-flex justify-content-sm-start">
-                <button type="button" class="d-block btn btn-outline-secondary cart-btn link-green position-relative">
+                <button type="button" class="d-block btn btn-outline-secondary cart-btn link-green position-relative" data-bs-toggle="tooltip" data-bs-placement="bottom" title="سبد خرید">
                     <i class="bi bi-cart-fill"></i>
                     <span class="position-absolute top-0 start-0 translate-middle p-1 bg-badge rounded-circle">
                         <span class="visually-hidden">New alerts</span>
                     </span>
+                </button>
+                <button type="button" class="d-block btn btn-outline-secondary cart-btn link-green position-relative" style="margin-right: 10px;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="جستجو">
+                    <i class="bi bi-search"></i>
                 </button>
                 {% if user.is_authenticated %}
                 <span class="d-none d-lg-block ms-2 ps-3 pe-5 py-1 badge rounded-pill user-point"> <img src="{% static 'img/game-controller-outline.svg' %}" alt="User_Point" class="me-1"> 129</span>
@@ -36,7 +39,7 @@
                     <a href="#" class="d-none d-lg-block d-md-block link-green text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="{% static 'img/avatar.jpg' %}" alt="avatar" width="36" height="36" class="rounded-circle user-avatar">
                     </a>
-                    <ul class="dropdown-menu text-small bg-black user-menu-dropdown" aria-labelledby="dropdownUser1">
+                    <ul class="dropdown-menu text-small user-menu-dropdown" aria-labelledby="dropdownUser1">
                         <li><a class="dropdown-item text-velo" href="#"><span><i class="bi bi-person-circle"></i></span>پروفایل</a></li>
                         <li><a class="dropdown-item text-velo" href="#"><span><i class="bi bi-chat-dots"></i></span>تیکت</a></li>
                         <li><a class="dropdown-item text-velo" href="#"><span><i class="bi bi-gear"></i></span>تنظیمات</a></li>
@@ -47,9 +50,15 @@
                     </ul>
                 </div>
                 {% else %}
-                <div class="justify-content-sm-start">
-                    <a href="{% url 'login' %}" class="btn btn-outline-success mr-10" role="button" style="margin-left: 10px;margin-right: 10px;margin-top: 2px;">ورود</a>
+                <button type="button" class="d-block btn btn-outline-secondary cart-btn link-green position-relative" style="margin-right: 10px;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="ثبت نام">
+                    <i class="bi bi-person-plus-fill"></i>
+                </button>
+                <!-- <div class="justify-content-sm-start">
+                    <a href="{% url 'login' %}" class="btn btn-outline-success mr-10" role="button" style="margin-right: 10px;margin-top: 2px;">ورود</a>
                 </div>
+                <div class="justify-content-sm-start">
+                    <a href="{% url 'register' %}" class="btn btn-success mr-10" role="button" style="margin-left: 10px;margin-right: 10px;margin-top: 2px;">ثبت نام</a>
+                </div> -->
                 {% endif %}
             </div>
         </div>
