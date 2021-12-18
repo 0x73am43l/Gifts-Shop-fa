@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'azbankgateways',
     'apps.account',
     'apps.giftcard',
     'apps.blog',
@@ -143,3 +144,29 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# AUTH_USER_MODEL = 'account.User'
+
+AZ_IRANIAN_BANK_GATEWAYS = {
+   'GATEWAYS': {
+       'BMI': {
+           'MERCHANT_CODE': '<YOUR MERCHANT CODE>',
+           'TERMINAL_CODE': '<YOUR TERMINAL CODE>',
+           'SECRET_KEY': '<YOUR SECRET CODE>',
+       },
+       'ZARINPAL': {
+        #    'MERCHANT_CODE': '<YOUR MERCHANT CODE>',
+        'MERCHANT_CODE': config('ZARINPAL_MERCHANT_CODE'),
+       },
+   },
+   'IS_SAMPLE_FORM_ENABLE': True,
+   'DEFAULT': 'ZARINPAL',
+   'CURRENCY': 'IRT',
+   'TRACKING_CODE_QUERY_PARAM': 'tc',
+   'TRACKING_CODE_LENGTH': 16,
+   'SETTING_VALUE_READER_CLASS': 'azbankgateways.readers.DefaultReader',
+   'BANK_PRIORITIES': [
+    #    'BMI',
+    #    'SEP',
+   ],
+}
