@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'azbankgateways',
     'apps.account',
     'apps.giftcard',
+    'apps.dashboard',
     'apps.blog',
 ]
 
