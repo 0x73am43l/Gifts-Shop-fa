@@ -20,7 +20,7 @@
                 </li>
                 <li><a href="#" class="d-none d-lg-block nav-link px-2 link-secondary text-velo">وبلاگ</a></li>
                 <li><a href="{% url 'terms' %}" class="d-none d-lg-block nav-link px-2 link-secondary text-velo">قوانین</a></li>
-                <li><a href="#" class="d-none d-lg-block nav-link px-2 link-secondary text-velo">ارتباط باما</a></li>
+                <li><a href="{% url 'support' %}" class="d-none d-lg-block nav-link px-2 link-secondary text-velo">ارتباط باما</a></li>
             </ul>
 
             <div class="d-flex justify-content-sm-start">
@@ -37,10 +37,10 @@
                 <span class="d-none d-lg-block ms-2 ps-3 pe-5 py-1 badge rounded-pill user-point"> <img src="{% static 'img/game-controller-outline.svg' %}" alt="User_Point" class="me-1"> 129</span>
                 <div class=mx-2 dropdown text-end">
                     <a href="#" class="d-none d-lg-block d-md-block link-green text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="{% static 'img/avatar.jpg' %}" alt="avatar" width="36" height="36" class="rounded-circle user-avatar">
+                        <img src="{% static 'img/avatar.jpg' %}" alt="avatar" width="38" height="38" class="rounded-circle user-avatar">
                     </a>
                     <ul class="dropdown-menu text-small user-menu-dropdown" aria-labelledby="dropdownUser1">
-                        <li><a class="dropdown-item text-velo" href="#"><span><i class="bi bi-person-circle"></i></span>پروفایل</a></li>
+                        <li><a class="dropdown-item text-velo" href="{% url 'dashboard' %}"><span><i class="bi bi-person-circle"></i></span>پروفایل</a></li>
                         <li><a class="dropdown-item text-velo" href="#"><span><i class="bi bi-chat-dots"></i></span>تیکت</a></li>
                         <li><a class="dropdown-item text-velo" href="#"><span><i class="bi bi-gear"></i></span>تنظیمات</a></li>
                         <li>
@@ -50,7 +50,7 @@
                     </ul>
                 </div>
                 {% else %}
-                <button type="button" class="d-block btn btn-outline-secondary cart-btn link-green position-relative" style="margin-right: 10px;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="ثبت نام">
+                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="d-block btn btn-outline-secondary cart-btn link-green position-relative" style="margin-right: 10px;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="ثبت نام">
                     <i class="bi bi-person-plus-fill"></i>
                 </button>
                 <!-- <div class="justify-content-sm-start">
