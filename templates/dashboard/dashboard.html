@@ -1,0 +1,68 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="row g-3">
+        <div class="col-3">
+            <div class="box mt-4" style="height: 500px;padding: 0;">
+                <aside class="sidebar">
+                    <div id="leftside-navigation" class="nano">
+                      <ul class="nano-content">
+                        <li>
+                          <a href="#" class="hover-underline-animation"><span>داشبورد</span><i class="bi bi-person-badge"></i></a>
+                        </li>
+                        <li class="sub-menu">
+                          <a href="javascript:void(0);"><span>پروفایل</span><i class="arrow fa fa-angle-left pull-left"></i></a>
+                          <ul>
+
+                            <li><a href="ui-alerts-notifications.html">Alerts &amp; Notifications</a>
+                            </li>
+                            <li><a href="ui-panels.html">امتیازات</a>
+                            </li>
+                            <li><a href="ui-buttons.html">تغییر مشخصات</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="sub-menu">
+                          <a href="javascript:void(0);"><span>سفارشات</span><i class="arrow fa fa-angle-left pull-left"></i></a>
+                          <ul>
+                            <li><a href="tables-basic.html">لیست سفارشات</a>
+                            </li>
+
+                            <li><a href="tables-data.html">سبد خرید</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="sub-menu">
+                          <a href="javascript:void(0);"></i><span>تنظیمات</span><i class="arrow fa fa-angle-left pull-left"></i></a>
+                          <ul>
+                            <li><a href="forms-components.html">تعویض کلمه عبور</a>
+                            </li>
+                            <li><a href="forms-validation.html">نوتیفیکشن</a>
+                            </li>
+                            <li><a href="forms-mask.html">اضافه کردن شماره</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="sub-menu">
+                          <a href="javascript:void(0);"><span>تیکت</span><i class="arrow fa fa-angle-left pull-left"></i></a>
+                          <ul>
+                            <li class="active"><a href="mail-inbox.html">تیکت جدید</a>
+                            </li>
+                            <li><a href="mail-compose.html">تیکت ها</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </aside>
+            </div>
+        </div>
+        <div class="col">
+            <div class="box mt-4" style="height: 500px;">
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock content %}
