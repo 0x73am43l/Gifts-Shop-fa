@@ -1,0 +1,30 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+{#    <div class="border-bottom"></div>#}
+    <div class="row justify-content-center">
+        <div class="col-lg-4 col-sm-8 col-md-8" style="padding-bottom: 190px; padding-top: 80px">
+            <div class="box mt-3 pt-2" id="box_shadow" style="width: 100%;">
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <div class="mb-2">
+
+                      <label for="exampleInputEmail1" class="form-label text-small d-flex justify-content-center">ورود به سیستم</label>
+                        <p style="font-size: 13px; text-align: center">لطفا شماره موبایل خود را وارد کرده و سپس کد تائید پیامک شده را وارد نمائید.</p>
+                        <div class="input-group flex-nowrap" style="direction: ltr">
+                            <span class="input-group-text border-start-0 mt-4" id="addon-wrapping"">+۹۸</span>
+                            <input id="yourphone" type="text" class="form-control mt-4"  placeholder="شماره موبایل خود را وارد نمایید" aria-describedby="addon-wrapping" style="text-align: center; direction: ltr">
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 mb-4 mt-4">
+                        <button class="btn btn-success" type="submit">ارسال کد تایید
+                          <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true" style="color: #2a2a2a;"></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
