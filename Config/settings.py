@@ -117,19 +117,24 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'apps.account.backend.ModelBackend',
+]
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tehran'
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -171,3 +176,5 @@ AZ_IRANIAN_BANK_GATEWAYS = {
     #    'SEP',
    ],
 }
+
+AUTH_USER_MODEL = 'account.MyUser'
