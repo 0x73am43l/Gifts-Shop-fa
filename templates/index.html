@@ -1,9 +1,13 @@
 {% extends 'base/base.html' %}
 {% load static %}
 {% block content %}
+
+<button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
+
 <div class="container">
-    <!-- <div class="border-bottom"></div> -->
-    <div class="box mt-4" id="box_shadow">
+    <b class="hr anim"></b>
+{#    <div class="border-bottom"></div>#}
+    <div class="box mt-4" id="box_shadow" style="padding-bottom: 20px;">
         <div class="row gx-3 mt-2 justify-content-start g-2">
             <div class="col-sm-12 col-md-12 col-lg-6">
                 <!-- <img src="{% static 'img/Header/slide1.jpg' %}" alt="" width="100%" style="border-radius: 10px;"> -->
@@ -11,12 +15,12 @@
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
                         <div class="card-image">
-                          <img src="{% static 'img/header/s-four.jpg' %}" alt="Image Slider">
+                          <img src="{% static 'img/header/s-four.webp' %}" alt="Image Slider">
                         </div>
                       </div>
                       <div class="swiper-slide">
                         <div class="card-image">
-                          <img src="{% static 'img/header/s-five.jpg' %}" alt="Image Slider">
+                          <img src="{% static 'img/header/s-five1.jpg' %}" alt="Image Slider">
                         </div>
                       </div>
                       <div class="swiper-slide">
