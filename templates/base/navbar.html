@@ -3,24 +3,24 @@
     <div class="container">
         <div class="d-flex justify-content-between menu-container">
             <div class="logo d-flex justify-content-sm-end"><a href="/"><img src="{% static 'img/logo.png' %}" alt="logo" width="42" height="42" style="margin-left: 10px;" aria-label="logo"></a></div>
-            <ul class="nav col-sm-8 col-md-9 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0">
+            <ul class="nav col-sm-8 col-md-9 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0" style="font-weight: bold;">
                 <li><a href="/" class="d-none d-lg-block nav-link px-2 link-secondary text-velo hover-underline-animation">صفحه اصلی</a></li>
-                <li class="dropdown d-none d-lg-block">
+                <li class="dropdown mega-dropdown d-none d-lg-block">
                     <a class="nav-link dropdown-toggle text-velo" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        گیفت کارت
+                        دسته محصولات
                     </a>
-                    <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
-                        <li><a class="dropdown-item text-velo hover-underline-animation" href="#"><span><i class="bi bi-steam"></i></span>استیم</a></li>
-                        <li><a class="dropdown-item text-velo hover-underline-animation" href="#"><span><i class="bi bi-cart4"></i></span>آمازون</a></li>
-                        <li><a class="dropdown-item text-velo hover-underline-animation" href="#"><span><i class="bi bi-google"></i></span>گوگل پلی</a></li>
-                        <li><a class="dropdown-item text-velo hover-underline-animation" href="#"><span><i class="bi bi-camera-reels-fill"></i></span>نت فلیکس</a></li>
-                        <li><a class="dropdown-item text-velo hover-underline-animation" href="#"><span><i class="bi bi-controller"></i></span>بلیزارد</a></li>
-
+                   <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                        <li><a class="dropdown-item text-velo hover-underline-animation" href="#"><span><i class="bi bi-steam">&emsp;</i></span>استیم</a></li>
+                        <li><a class="dropdown-item text-velo hover-underline-animation" href="#"><span><i class="bi bi-cart4">&emsp;</i></span>آمازون</a></li>
+                        <li><a class="dropdown-item text-velo hover-underline-animation" href="#"><span><i class="bi bi-google">&emsp;</i></span>گوگل پلی</a></li>
+                        <li><a class="dropdown-item text-velo hover-underline-animation" href="#"><span><i class="bi bi-camera-reels-fill">&emsp;</i></span>نت فلیکس</a></li>
+                        <li><a class="dropdown-item text-velo hover-underline-animation" href="#"><span><i class="bi bi-controller">&emsp;</i></span>بلیزارد</a></li>
                     </ul>
                 </li>
                 <li><a href="{% url 'blog' %}" class="d-none d-lg-block nav-link px-2 link-secondary text-velo">وبلاگ</a></li>
                 <li><a href="{% url 'terms' %}" class="d-none d-lg-block nav-link px-2 link-secondary text-velo">قوانین</a></li>
                 <li><a href="{% url 'support' %}" class="d-none d-lg-block nav-link px-2 link-secondary text-velo">ارتباط باما</a></li>
+                <li><a href="{% url 'support' %}" class="d-none d-lg-block nav-link px-2 link-secondary text-velo"> تخفیفات ویژه<i class="bi bi-gem"></i></a></li>
             </ul>
 
             <div class="d-flex justify-content-sm-start">
@@ -40,25 +40,19 @@
                         <img src="{% static 'img/avatar.jpg' %}" alt="avatar" width="38" height="38" class="rounded-circle user-avatar">
                     </a>
                     <ul class="dropdown-menu text-small user-menu-dropdown" aria-labelledby="dropdownUser1">
-                        <li><a class="dropdown-item text-velo" href="{% url 'dashboard' %}"><span><i class="bi bi-person-circle"></i></span>پروفایل</a></li>
-                        <li><a class="dropdown-item text-velo" href="#"><span><i class="bi bi-chat-dots"></i></span>تیکت</a></li>
-                        <li><a class="dropdown-item text-velo" href="#"><span><i class="bi bi-gear"></i></span>تنظیمات</a></li>
+                        <li><a class="dropdown-item text-velo" href="{% url 'dashboard' %}"><span><i class="bi bi-person-circle">&emsp;</i></span>پروفایل</a></li>
+                        <li><a class="dropdown-item text-velo" href="#"><span><i class="bi bi-chat-dots">&emsp;</i></span>تیکت</a></li>
+                        <li><a class="dropdown-item text-velo" href="#"><span><i class="bi bi-gear">&emsp;</i></span>تنظیمات</a></li>
                         <li>
                         <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item text-velo" href="#"><span><i class="bi bi-box-arrow-right"></i></span>خروج</a></li>
+                        <li><a class="dropdown-item text-velo" href="{% url 'logout' %}"><span><i class="bi bi-box-arrow-right">&emsp;</i></span>خروج</a></li>
                     </ul>
                 </div>
                 {% else %}
-                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="d-block btn btn-outline-secondary cart-btn link-green position-relative" style="margin-right: 10px;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="ثبت نام">
-                    <i class="bi bi-person-plus-fill"></i>
-                </button>
-                <!-- <div class="justify-content-sm-start">
-                    <a href="{% url 'login' %}" class="btn btn-outline-success mr-10" role="button" style="margin-right: 10px;margin-top: 2px;">ورود</a>
-                </div>
-                <div class="justify-content-sm-start">
-                    <a href="{% url 'register' %}" class="btn btn-success mr-10" role="button" style="margin-left: 10px;margin-right: 10px;margin-top: 2px;">ثبت نام</a>
-                </div> -->
+                    <a href="{% url 'signin' %}" class="d-block btn btn-outline-secondary cart-btn link-green position-relative" style="margin-right: 10px;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="ورود / ثبت نام">
+                        <i class="bi bi-person-plus-fill"></i>
+                    </a>
                 {% endif %}
             </div>
         </div>
