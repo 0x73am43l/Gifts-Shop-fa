@@ -1,13 +1,16 @@
+// 1) Scroll Progress Bar:
 // const scrollProgress = document.getElementById('scroll-progress');
 // const height =
 //   document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
+//
 // window.addEventListener('scroll', () => {
 //   const scrollTop =
 //     document.body.scrollTop || document.documentElement.scrollTop;
-//   scrollProgress.style.width = `${(scrollTop / height) * 70}%`;
+//   scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
 // });
-var Swiper;
+
+// 2) Swiper Slider:
+// var Swiper;
 var swiper = new Swiper(".swiper-container", {
   slidesPerView: 1,
   spaceBetween: 10,
@@ -37,6 +40,7 @@ var swiper = new Swiper(".swiper-container", {
   }
 });
 
+// 3) ????:
 var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
 triggerTabList.forEach(function (triggerEl) {
   var tabTrigger = new bootstrap.Tab(triggerEl)
@@ -46,3 +50,8 @@ triggerTabList.forEach(function (triggerEl) {
     tabTrigger.show()
   })
 })
+
+// 4) Protect Against DDoS Attack (prevent F5 after submit)
+if (window.history.replaceState){
+  window.history.replaceState(null, null, window.location.href);
+}
