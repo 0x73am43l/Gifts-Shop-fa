@@ -12,11 +12,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 from decouple import config, Csv
-import sys,os
+import sys, os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -29,7 +28,6 @@ DEBUG = config('DEBUG', default=True, cast=bool)
 
 # ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -77,7 +75,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Config.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
@@ -122,7 +119,6 @@ AUTHENTICATION_BACKENDS = [
     'apps.account.backend.ModelBackend',
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
@@ -136,7 +132,6 @@ USE_L10N = True
 
 USE_TZ = False
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
@@ -146,6 +141,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
@@ -154,27 +152,29 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # AUTH_USER_MODEL = 'account.User'
 
 AZ_IRANIAN_BANK_GATEWAYS = {
-   'GATEWAYS': {
-       'BMI': {
-           'MERCHANT_CODE': '<YOUR MERCHANT CODE>',
-           'TERMINAL_CODE': '<YOUR TERMINAL CODE>',
-           'SECRET_KEY': '<YOUR SECRET CODE>',
-       },
-       'ZARINPAL': {
-        #    'MERCHANT_CODE': '<YOUR MERCHANT CODE>',
-        'MERCHANT_CODE': config('ZARINPAL_MERCHANT_CODE'),
-       },
-   },
-   'IS_SAMPLE_FORM_ENABLE': True,
-   'DEFAULT': 'ZARINPAL',
-   'CURRENCY': 'IRT',
-   'TRACKING_CODE_QUERY_PARAM': 'tc',
-   'TRACKING_CODE_LENGTH': 16,
-   'SETTING_VALUE_READER_CLASS': 'azbankgateways.readers.DefaultReader',
-   'BANK_PRIORITIES': [
-    #    'BMI',
-    #    'SEP',
-   ],
+    'GATEWAYS': {
+        'BMI': {
+            'MERCHANT_CODE': '<YOUR MERCHANT CODE>',
+            'TERMINAL_CODE': '<YOUR TERMINAL CODE>',
+            'SECRET_KEY': '<YOUR SECRET CODE>',
+        },
+        'ZARINPAL': {
+            #    'MERCHANT_CODE': '<YOUR MERCHANT CODE>',
+            'MERCHANT_CODE': config('ZARINPAL_MERCHANT_CODE'),
+        },
+    },
+    'IS_SAMPLE_FORM_ENABLE': True,
+    'DEFAULT': 'ZARINPAL',
+    'CURRENCY': 'IRT',
+    'TRACKING_CODE_QUERY_PARAM': 'tc',
+    'TRACKING_CODE_LENGTH': 16,
+    'SETTING_VALUE_READER_CLASS': 'azbankgateways.readers.DefaultReader',
+    'BANK_PRIORITIES': [
+        #    'BMI',
+        #    'SEP',
+    ],
 }
 
 AUTH_USER_MODEL = 'account.MyUser'
+
+GHASEDAK_API = config('GHASEDAK')
