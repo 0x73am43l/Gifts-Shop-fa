@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def steam(requests):
+    return render(requests, 'product/steam.html')
