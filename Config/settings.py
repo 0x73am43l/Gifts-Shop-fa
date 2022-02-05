@@ -76,7 +76,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Config.wsgi.application'
 
 # Database
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 # DATABASES = {
 #     'default': {
@@ -178,3 +177,8 @@ AZ_IRANIAN_BANK_GATEWAYS = {
 AUTH_USER_MODEL = 'account.MyUser'
 
 GHASEDAK_API = config('GHASEDAK')
+
+# Celery
+CELERY_BROKER_URL = 'amqp://localhost:5672//'
+CELERY_RESULT_BACKEND = ''
+CELERY_TASK_TIME_LIMIT = 30 * 60
