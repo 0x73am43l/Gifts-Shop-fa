@@ -1,336 +1,342 @@
 {% extends 'base/base.html' %}
 {% load static %}
 {% block content %}
+    <div class="background-span">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-<div class="container">
-    <b class="hr anim"></b>
- {% comment %} <div class="border-bottom"></div> {% endcomment %}
-    <div class="box mt-4 pb-4" id="box_shadow" style="padding-bottom: 20px;">
-        <div class="row gx-3 mt-2 justify-content-start g-2">
-            <div class="col-sm-12 col-md-12 col-lg-6">
-                <!-- <img src="{% static 'img/Header/slide1.jpg' %}" alt="" width="100%" style="border-radius: 10px;"> -->
-                <div class="swiper-container" style="margin-top: 3%;">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <div class="card-image">
-                          <img src="{% static 'img/header/s-four.webp' %}" alt="Image Slider">
+    <div class="container">
+        <b class="hr anim"></b>
+     {% comment %} <div class="border-bottom"></div> {% endcomment %}
+        <div class="box mt-4 pb-4" id="box_shadow" style="padding-bottom: 20px;">
+            <div class="row gx-3 mt-2 justify-content-start g-2">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <!-- <img src="{% static 'img/Header/slide1.jpg' %}" alt="" width="100%" style="border-radius: 10px;"> -->
+                    <div class="swiper-container" style="margin-top: 4%;">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="card-image">
+                              <img src="{% static 'img/header/s-four.webp' %}" alt="Image Slider">
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="card-image">
+                              <img src="{% static 'img/header/s-five1.jpg' %}" alt="Image Slider">
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="card-image">
+                              <img src="{% static 'img/header/s-three.jpg' %}" alt="Image Slider">
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="card-image">
-                          <img src="{% static 'img/header/s-five1.jpg' %}" alt="Image Slider">
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Add Scrollbar -->
+                        <div class="swiper-button-next">
+                          <i class="fas fa-chevron-circle-left arrow-icon"></i>
                         </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="card-image">
-                          <img src="{% static 'img/header/s-three.jpg' %}" alt="Image Slider">
+                        <div class="swiper-button-prev">
+                          <i class="fas fa-chevron-circle-right arrow-icon"></i>
                         </div>
-                      </div>
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                    <!-- Add Scrollbar -->
-                    <div class="swiper-button-next">
-                      <i class="fas fa-chevron-circle-left arrow-icon"></i>
-                    </div>
-                    <div class="swiper-button-prev">
-                      <i class="fas fa-chevron-circle-right arrow-icon"></i>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-3">
-                <div class="item">
-                    <img src="{% static 'img/header/apple.webp' %}" alt="" width="100%">
-                </div>
-                <div class="col mt-2">
+                <div class="col-sm-6 col-md-6 col-lg-3">
                     <div class="item">
-                        <img src="{% static 'img/header/netflix.webp' %}" alt="" width="100%" style="margin-top: 5px;">
+                        <img src="{% static 'img/header/apple.png' %}" alt="" width="100%">
+                    </div>
+                    <div class="col mt-2">
+                        <div class="item">
+                            <img src="{% static 'img/header/netflix.png' %}" alt="" width="100%" style="margin-top: 5px;">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-3">
-                <div class="item">
-                    <img src="{% static 'img/header/pubg.webp' %}" alt="" width="100%">
-                </div>
-                <div class="col mt-2">
+                <div class="col-sm-6 col-md-6 col-lg-3">
                     <div class="item">
-                        <img src="{% static 'img/header/xbox.webp' %}" alt="" width="100%">
+                        <img src="{% static 'img/header/pubg.png' %}" alt="" width="100%">
+                    </div>
+                    <div class="col mt-2">
+                        <div class="item">
+                            <img src="{% static 'img/header/xbox.png' %}" alt="" width="100%">
+                        </div>
                     </div>
                 </div>
             </div>
+
+
         </div>
-
-
-    </div>
-    <div class="box d-flex flex-wrap justify-content-center pt-3" id="about_site" style="margin-top: 2%;">
-        <div class="col">
-            <h6 class="text-velo" style="text-align: center;"><img src="{% static 'img/gift-card.png' %}" alt="gift card" width="32" height="32"> گیفت کارت اورجینال</h6>
-        </div>
-        <div class="col">
-            <h6 class="text-velo" style="text-align: center;"><img src="{% static 'img/cheap.png' %}" alt="cheap" width="32" height="32"> قیمت های منصفانه</h6>
-        </div>
-        <div class="col">
-            <h6 class="text-velo" style="text-align: center;"><img src="{% static 'img/delivery.png' %}" alt="delivery" width="32" height="32"> تحویل آنی</h6>
-        </div>
-        <div class="col">
-            <h6 class="text-velo" style="text-align: center;"><img src="{% static 'img/support.png' %}" alt="support" width="32" height="32">گارانتی محصولات</h6>
-        </div>
-    </div>
-
-    <div class="wrapper">
-        <h5><strong>🔥 پرفروش ها</strong></h5>
-    </div>
-
-    <div class="container-card-slider">
-        <ul id="autoWidth-2" class="cs-hidden">
-            <li class="cards">
-                <figure class="card">
-                    <img src="{% static 'img/slider/games/1.jpg' %}"/>
-                    <figcaption>New World</figcaption>
-                </figure>
-            </li>
-            <li class="cards">
-                <figure class="card">
-                    <img src="{% static 'img/slider/games/2.jpg' %}" />
-                    <figcaption>Witcher III</figcaption>
-                </figure>
-            </li>
-            <li class="cards">
-                <figure class="card">
-                    <img src="{% static 'img/slider/games/3.webp' %}" />
-                    <figcaption>BattleField</figcaption>
-                </figure>
-            </li>
-            <li class="cards">
-                <figure class="card">
-                    <img src="{% static 'img/slider/games/4.jpg' %}" />
-                    <figcaption>Resident Evil</figcaption>
-                </figure>
-            </li>
-            <li class="cards">
-                <figure class="card">
-                    <img src="{% static 'img/slider/games/5.jpg' %}" />
-                    <figcaption>Dandara</figcaption>
-                </figure>
-            </li>
-            <li class="cards">
-                <figure class="card">
-                    <img src="{% static 'img/slider/games/6.jpg' %}" />
-                    <figcaption>MoonLighter</figcaption>
-                </figure>
-            </li>
-        </ul>
-    </div>
-
-    <div class="wrapper">
-        <h5><strong>🎁 گیفت کارت ها</strong></h5>
-    </div>
-
-    <div class="d-flex row mt-1 g-4">
-        <!-- <div class="col-sm-5 col-md-4 col-lg-3"> -->
-        <div class="col-lg-3 col-md-4 col-6 d-flex justify-content-center">
-            <div class="card position-relative">
-                <!-- <div class="imgBox">
-                    <img src="{% static 'img/cards/spotify.png' %}" alt="Steam-Gift" class="Product_logo">
-                </div> -->
-                <div class="img_box">
-                    <img src="{% static 'img/cards/Steam.png' %}" alt="" loading="lazy">
-                </div>
-                <div class="contentBox">
-                    <h3>استیم گیفت</h3>
-                    <div class="regions-product">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/usa-flag.png' %}" alt="">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/turk-flag.png' %}" alt="">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/arg-flag.png' %}" alt="">
-                    </div>
-                </div>
-                <a href="{% url 'steam' %}" class="stretched-link"></a>
-
+        <div class="box d-flex flex-wrap justify-content-center pt-3" id="about_site" style="margin-top: 2%;">
+            <div class="col">
+                <h6 class="text-velo" style="text-align: center;"><img src="{% static 'img/gift-card.png' %}" alt="gift card" width="32" height="32"> گیفت کارت اورجینال</h6>
             </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6 d-flex justify-content-center">
-            <div class="card position-relative">
-                <!-- <div class="imgBox">
-                    <img src="{% static 'img/cards/apple.png' %}" alt="Steam-Gift" class="Product_logo">
-                </div> -->
-                <div class="img_box">
-                    <img src="{% static 'img/cards/spotify.png' %}" alt="" loading="lazy">
-                </div>
-                <div class="contentBox">
-                    <h3>اسپاتیفای</h3>
-                    <div class="regions-product">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/usa-flag.png' %}" alt="">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/turk-flag.png' %}" alt="">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/arg-flag.png' %}" alt="">
-                    </div>
-                </div>
-                <a href="#" class="stretched-link"></a>
+            <div class="col">
+                <h6 class="text-velo" style="text-align: center;"><img src="{% static 'img/cheap.png' %}" alt="cheap" width="32" height="32"> قیمت های منصفانه</h6>
             </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6 d-flex justify-content-center">
-            <div class="card position-relative">
-                <!-- <div class="imgBox">
-                    <img src="{% static 'img/cards/xbox.png' %}" alt="Steam-Gift" class="Product_logo">
-                </div> -->
-                <div class="img_box">
-                    <img src="{% static 'img/cards/google-play.png' %}" alt="" loading="lazy">
-                </div>
-                <div class="contentBox">
-                    <h3>گوگل پلی</h3>
-                    <div class="regions-product">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/usa-flag.png' %}" alt="">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/turk-flag.png' %}" alt="">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/arg-flag.png' %}" alt="">
-                    </div>
-                </div>
-                <a href="#" class="stretched-link"></a>
+            <div class="col">
+                <h6 class="text-velo" style="text-align: center;"><img src="{% static 'img/delivery.png' %}" alt="delivery" width="32" height="32"> تحویل آنی</h6>
             </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6 d-flex justify-content-center">
-            <div class="card position-relative">
-                <!-- <div class="imgBox">
-                    <img src="{% static 'img/cards/steam.png' %}" alt="Steam-Gift" class="Product_logo">
-                </div> -->
-                <div class="img_box">
-                    <img src="{% static 'img/cards/apple_1.png' %}" alt="" loading="lazy">
-                </div>
-                <div class="contentBox">
-                    <h3>آیتونز</h3>
-                    <div class="regions-product">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/usa-flag.png' %}" alt="">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/turk-flag.png' %}" alt="">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/arg-flag.png' %}" alt="">
-                    </div>
-                </div>
-                <a href="#" class="stretched-link"></a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6 d-flex justify-content-center">
-            <div class="card position-relative">
-                <!-- <div class="imgBox">
-                    <img src="{% static 'img/cards/spotify.png' %}" alt="Steam-Gift" class="Product_logo">
-                </div> -->
-                <div class="img_box">
-                    <img src="{% static 'img/cards/netflix.png' %}" alt="" loading="lazy">
-                </div>
-                <div class="contentBox">
-                    <h3>نت فلیکس</h3>
-                    <div class="regions-product">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/usa-flag.png' %}" alt="">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/turk-flag.png' %}" alt="">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/arg-flag.png' %}" alt="">
-                    </div>
-                </div>
-                <a href="#" class="stretched-link"></a>
-
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6 d-flex justify-content-center">
-            <div class="card position-relative">
-                <!-- <div class="imgBox">
-                    <img src="{% static 'img/cards/spotify.png' %}" alt="Steam-Gift" class="Product_logo">
-                </div> -->
-                <div class="img_box">
-                    <img src="{% static 'img/cards/razer-gold-s.png' %}" alt="" loading="lazy">
-                </div>
-                <div class="contentBox">
-                    <h3>ریزر گلد</h3>
-                    <div class="regions-product">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/usa-flag.png' %}" alt="">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/turk-flag.png' %}" alt="">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/arg-flag.png' %}" alt="">
-                    </div>
-                </div>
-                <a href="#" class="stretched-link"></a>
-
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6 d-flex justify-content-center">
-            <div class="card position-relative">
-                <!-- <div class="imgBox">
-                    <img src="{% static 'img/cards/spotify.png' %}" alt="Steam-Gift" class="Product_logo">
-                </div> -->
-                <div class="img_box">
-                    <img src="{% static 'img/cards/playstation.png' %}" alt="" loading="lazy">
-                </div>
-                <div class="contentBox">
-                    <h3>پلی استیشن</h3>
-                    <div class="regions-product">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/usa-flag.png' %}" alt="">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/turk-flag.png' %}" alt="">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/arg-flag.png' %}" alt="">
-                    </div>
-                </div>
-                <a href="#" class="stretched-link"></a>
-
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6 d-flex justify-content-center">
-            <div class="card position-relative">
-                <!-- <div class="imgBox">
-                    <img src="{% static 'img/cards/spotify.png' %}" alt="Steam-Gift" class="Product_logo">
-                </div> -->
-                <div class="img_box">
-                    <img src="{% static 'img/cards/xbox.png' %}" alt="" loading="lazy">
-                </div>
-                <div class="contentBox">
-                    <h3>ایکس باکس</h3>
-                    <div class="regions-product">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/usa-flag.png' %}" alt="">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/turk-flag.png' %}" alt="">
-                        <img class="regions-item-product" src="{% static 'img/cards/flag/arg-flag.png' %}" alt="">
-                    </div>
-                </div>
-                <a href="#" class="stretched-link"></a>
-
+            <div class="col">
+                <h6 class="text-velo" style="text-align: center;"><img src="{% static 'img/support.png' %}" alt="support" width="32" height="32">گارانتی محصولات</h6>
             </div>
         </div>
 
         <div class="wrapper">
-            <h5><strong>🎮 محصولات استیم</strong></h5>
+            <h5><strong>🔥 پرفروش ها</strong></h5>
         </div>
- <div class="container-card-slider">
-        <ul id="autoWidth" class="cs-hidden">
-            <li class="cards">
-                <figure class="card">
-                    <img src="{% static 'img/slider/games/1.jpg' %}"/>
-                    <figcaption>New World</figcaption>
-                </figure>
-            </li>
-            <li class="cards">
-                <figure class="card">
-                    <img src="{% static 'img/slider/games/2.jpg' %}" />
-                    <figcaption>Witcher III</figcaption>
-                </figure>
-            </li>
-            <li class="cards">
-                <figure class="card">
-                    <img src="{% static 'img/slider/games/3.webp' %}" />
-                    <figcaption>BattleField</figcaption>
-                </figure>
-            </li>
-            <li class="cards">
-                <figure class="card">
-                    <img src="{% static 'img/slider/games/4.jpg' %}" />
-                    <figcaption>Resident Evil</figcaption>
-                </figure>
-            </li>
-            <li class="cards">
-                <figure class="card">
-                    <img src="{% static 'img/slider/games/5.jpg' %}" />
-                    <figcaption>Dandara</figcaption>
-                </figure>
-            </li>
-            <li class="cards">
-                <figure class="card">
-                    <img src="{% static 'img/slider/games/6.jpg' %}" />
-                    <figcaption>MoonLighter</figcaption>
-                </figure>
-            </li>
-        </ul>
-    </div>
+
+        <div class="container-card-slider">
+            <ul id="autoWidth-2" class="cs-hidden">
+                <li class="cards">
+                    <figure class="card">
+                        <img src="{% static 'img/slider/games/1.jpg' %}"/>
+                        <figcaption>New World</figcaption>
+                    </figure>
+                </li>
+                <li class="cards">
+                    <figure class="card">
+                        <img src="{% static 'img/slider/games/2.jpg' %}" />
+                        <figcaption>Witcher III</figcaption>
+                    </figure>
+                </li>
+                <li class="cards">
+                    <figure class="card">
+                        <img src="{% static 'img/slider/games/3.webp' %}" />
+                        <figcaption>BattleField</figcaption>
+                    </figure>
+                </li>
+                <li class="cards">
+                    <figure class="card">
+                        <img src="{% static 'img/slider/games/4.jpg' %}" />
+                        <figcaption>Resident Evil</figcaption>
+                    </figure>
+                </li>
+                <li class="cards">
+                    <figure class="card">
+                        <img src="{% static 'img/slider/games/5.jpg' %}" />
+                        <figcaption>Dandara</figcaption>
+                    </figure>
+                </li>
+                <li class="cards">
+                    <figure class="card">
+                        <img src="{% static 'img/slider/games/6.jpg' %}" />
+                        <figcaption>MoonLighter</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+
+        <div class="wrapper">
+            <h5><strong>🎁 گیفت کارت ها</strong></h5>
+        </div>
+
+        <div class="d-flex row mt-1 g-4">
+            <!-- <div class="col-sm-5 col-md-4 col-lg-3"> -->
+            <div class="col-lg-3 col-md-4 col-6 d-flex justify-content-center">
+                <div class="card position-relative">
+                    <!-- <div class="imgBox">
+                        <img src="{% static 'img/cards/spotify.png' %}" alt="Steam-Gift" class="Product_logo">
+                    </div> -->
+                    <div class="img_box">
+                        <img src="{% static 'img/cards/Steam.png' %}" alt="" loading="lazy">
+                    </div>
+                    <div class="contentBox">
+                        <h3>استیم گیفت</h3>
+                        <div class="regions-product">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/usa-flag.png' %}" alt="">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/turk-flag.png' %}" alt="">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/arg-flag.png' %}" alt="">
+                        </div>
+                    </div>
+                    <a href="{% url 'steam' %}" class="stretched-link"></a>
+
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex justify-content-center">
+                <div class="card position-relative">
+                    <!-- <div class="imgBox">
+                        <img src="{% static 'img/cards/apple.png' %}" alt="Steam-Gift" class="Product_logo">
+                    </div> -->
+                    <div class="img_box">
+                        <img src="{% static 'img/cards/spotify.png' %}" alt="" loading="lazy">
+                    </div>
+                    <div class="contentBox">
+                        <h3>اسپاتیفای</h3>
+                        <div class="regions-product">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/usa-flag.png' %}" alt="">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/turk-flag.png' %}" alt="">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/arg-flag.png' %}" alt="">
+                        </div>
+                    </div>
+                    <a href="#" class="stretched-link"></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex justify-content-center">
+                <div class="card position-relative">
+                    <!-- <div class="imgBox">
+                        <img src="{% static 'img/cards/xbox.png' %}" alt="Steam-Gift" class="Product_logo">
+                    </div> -->
+                    <div class="img_box">
+                        <img src="{% static 'img/cards/google-play.png' %}" alt="" loading="lazy">
+                    </div>
+                    <div class="contentBox">
+                        <h3>گوگل پلی</h3>
+                        <div class="regions-product">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/usa-flag.png' %}" alt="">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/turk-flag.png' %}" alt="">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/arg-flag.png' %}" alt="">
+                        </div>
+                    </div>
+                    <a href="#" class="stretched-link"></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex justify-content-center">
+                <div class="card position-relative">
+                    <!-- <div class="imgBox">
+                        <img src="{% static 'img/cards/steam.png' %}" alt="Steam-Gift" class="Product_logo">
+                    </div> -->
+                    <div class="img_box">
+                        <img src="{% static 'img/cards/apple_1.png' %}" alt="" loading="lazy">
+                    </div>
+                    <div class="contentBox">
+                        <h3>آیتونز</h3>
+                        <div class="regions-product">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/usa-flag.png' %}" alt="">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/turk-flag.png' %}" alt="">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/arg-flag.png' %}" alt="">
+                        </div>
+                    </div>
+                    <a href="#" class="stretched-link"></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex justify-content-center">
+                <div class="card position-relative">
+                    <!-- <div class="imgBox">
+                        <img src="{% static 'img/cards/spotify.png' %}" alt="Steam-Gift" class="Product_logo">
+                    </div> -->
+                    <div class="img_box">
+                        <img src="{% static 'img/cards/netflix.png' %}" alt="" loading="lazy">
+                    </div>
+                    <div class="contentBox">
+                        <h3>نت فلیکس</h3>
+                        <div class="regions-product">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/usa-flag.png' %}" alt="">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/turk-flag.png' %}" alt="">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/arg-flag.png' %}" alt="">
+                        </div>
+                    </div>
+                    <a href="#" class="stretched-link"></a>
+
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex justify-content-center">
+                <div class="card position-relative">
+                    <!-- <div class="imgBox">
+                        <img src="{% static 'img/cards/spotify.png' %}" alt="Steam-Gift" class="Product_logo">
+                    </div> -->
+                    <div class="img_box">
+                        <img src="{% static 'img/cards/razer-gold-s.png' %}" alt="" loading="lazy">
+                    </div>
+                    <div class="contentBox">
+                        <h3>ریزر گلد</h3>
+                        <div class="regions-product">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/usa-flag.png' %}" alt="">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/turk-flag.png' %}" alt="">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/arg-flag.png' %}" alt="">
+                        </div>
+                    </div>
+                    <a href="#" class="stretched-link"></a>
+
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex justify-content-center">
+                <div class="card position-relative">
+                    <!-- <div class="imgBox">
+                        <img src="{% static 'img/cards/spotify.png' %}" alt="Steam-Gift" class="Product_logo">
+                    </div> -->
+                    <div class="img_box">
+                        <img src="{% static 'img/cards/playstation.png' %}" alt="" loading="lazy">
+                    </div>
+                    <div class="contentBox">
+                        <h3>پلی استیشن</h3>
+                        <div class="regions-product">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/usa-flag.png' %}" alt="">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/turk-flag.png' %}" alt="">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/arg-flag.png' %}" alt="">
+                        </div>
+                    </div>
+                    <a href="#" class="stretched-link"></a>
+
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex justify-content-center">
+                <div class="card position-relative">
+                    <!-- <div class="imgBox">
+                        <img src="{% static 'img/cards/spotify.png' %}" alt="Steam-Gift" class="Product_logo">
+                    </div> -->
+                    <div class="img_box">
+                        <img src="{% static 'img/cards/xbox.png' %}" alt="" loading="lazy">
+                    </div>
+                    <div class="contentBox">
+                        <h3>ایکس باکس</h3>
+                        <div class="regions-product">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/usa-flag.png' %}" alt="">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/turk-flag.png' %}" alt="">
+                            <img class="regions-item-product" src="{% static 'img/cards/flag/arg-flag.png' %}" alt="">
+                        </div>
+                    </div>
+                    <a href="#" class="stretched-link"></a>
+
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <h5><strong>🎮 محصولات استیم</strong></h5>
+            </div>
+     <div class="container-card-slider">
+            <ul id="autoWidth" class="cs-hidden">
+                <li class="cards">
+                    <figure class="card">
+                        <img src="{% static 'img/slider/games/1.jpg' %}"/>
+                        <figcaption>New World</figcaption>
+                    </figure>
+                </li>
+                <li class="cards">
+                    <figure class="card">
+                        <img src="{% static 'img/slider/games/2.jpg' %}" />
+                        <figcaption>Witcher III</figcaption>
+                    </figure>
+                </li>
+                <li class="cards">
+                    <figure class="card">
+                        <img src="{% static 'img/slider/games/3.webp' %}" />
+                        <figcaption>BattleField</figcaption>
+                    </figure>
+                </li>
+                <li class="cards">
+                    <figure class="card">
+                        <img src="{% static 'img/slider/games/4.jpg' %}" />
+                        <figcaption>Resident Evil</figcaption>
+                    </figure>
+                </li>
+                <li class="cards">
+                    <figure class="card">
+                        <img src="{% static 'img/slider/games/5.jpg' %}" />
+                        <figcaption>Dandara</figcaption>
+                    </figure>
+                </li>
+                <li class="cards">
+                    <figure class="card">
+                        <img src="{% static 'img/slider/games/6.jpg' %}" />
+                        <figcaption>MoonLighter</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
 
 
+        </div>
     </div>
-</div>
 {% endblock content %}
