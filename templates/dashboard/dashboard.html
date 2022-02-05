@@ -1,25 +1,29 @@
 {% extends 'base/base.html' %}
 {% load static %}
 {% block content %}
-<div class="container">
-    <div class="row g-3">
-        <div class="col-3">
-            <div class="box mt-4" style="height: 500px;padding: 0;">
-                {% include 'dashboard/dashboard-menu.html' %}
+    <div class="background-span">
+        <span></span>
+        <span></span>
+    </div>
+    <div class="container">
+        <div class="row g-3">
+            <div class="col-3">
+                <div class="box_mute mt-4" style="height: 500px;padding: 0;">
+                    {% include 'dashboard/dashboard-menu.html' %}
+                </div>
             </div>
-        </div>
-        <div class="col">
-            <div class="box mt-4" style="height: 500px;">
-                <div class="row pt-5">
-                    <div class="col d-flex justify-content-center">
-                        <span>Hello Farshad</span>
-                    </div>
-                    <div class="col d-flex justify-content-center">
-                        <span>Hello Farshad</span>
+            <div class="col">
+                <div class="box mt-4" style="height: 500px;">
+                    <div class="row pt-5">
+                        <div class="col d-flex justify-content-center">
+                            <span>Hello Farshad</span>
+                        </div>
+                        <div class="col d-flex justify-content-center">
+                            <span>Hello Farshad</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 {% endblock content %}
