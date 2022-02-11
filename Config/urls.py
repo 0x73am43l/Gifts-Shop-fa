@@ -22,7 +22,8 @@ admin.site.index_title = 'مدیریت'                 # default: "Site adminis
 admin.site.site_title = 'داشبورد گیفتز شاپ'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('panel/', admin.site.urls),
+    path('__debug__/', include('debug_toolbar.urls')),
     path('bankgateways/', az_bank_gateways_urls()),
     path('', include('apps.web.urls')),
     path('', include('apps.account.urls')),
