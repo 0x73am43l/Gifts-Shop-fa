@@ -38,14 +38,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'debug_toolbar',
     'azbankgateways',
     'apps.account',
     'apps.giftcard',
     'apps.dashboard',
     'apps.blog',
+    'apps.game',
+    'apps.payments',
 ]
 
 MIDDLEWARE = [
+    # django debug toolbar
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -53,6 +58,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+INTERNAL_IPS = [
+    '127.0.0.1',
 ]
 
 ROOT_URLCONF = 'Config.urls'
@@ -180,5 +189,5 @@ GHASEDAK_API = config('GHASEDAK')
 
 # Celery
 CELERY_BROKER_URL = 'amqp://localhost:5672//'
-CELERY_RESULT_BACKEND = ''
+CELERY_RESULT_BACKEND = 'rpc://'
 CELERY_TASK_TIME_LIMIT = 30 * 60
