@@ -60,7 +60,6 @@ $(document).ready(function (){
     });
 });
 
-
 /* Change Profile Pic */
 $(document).ready(function() {
     $("#change_pic").hide();
@@ -70,3 +69,17 @@ $(document).ready(function() {
         $("#change_pic").hide();
     });
 });
+
+/* SignIn Send SMS Button */
+$('#send_otp').on('click', function() {
+
+    if ($(this).hasClass('disabled')) {
+        return false;
+    } else {
+        $(this).addClass('disabled');
+    }
+});
+
+/* Send OTP With Ajax */
+
+/* Dashboard Menu Change Icon */
