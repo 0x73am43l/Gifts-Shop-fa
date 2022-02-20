@@ -1,0 +1,59 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="row g-3">
+        <div class="col-3 d-none d-lg-block d-xl-block">
+            <div class="box_mute mt-4" style="height: 500px;padding: 0;">
+                {% include 'dashboard/dashboard-menu.html' %}
+            </div>
+        </div>
+        <div class="col">
+            <div class="box mt-4" style="height: 500px;">
+                <div class="col mb-3 pt-4">
+                    <h6>🎉 کوپن های تخفیف </h6>
+                    <span>از این قسمت میتونید کد های تخفیفتون رو مشاهده کنید</span>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover table-dark">
+                      <thead class="table-dark">
+                        <tr>
+                          <th class="col-3">💸 کد تخفیف</th>
+                          <th scope="col">مقدار</th>
+                          <th scope="col">تاریخ ایجاد</th>
+                          <th scope="col">تاریخ استفاده</th>
+                          <th scope="col">توضیح</th>
+                          <th scope="col">وضعیت</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                          <th scope="row">pDpaImq3FN</th>
+                          <td>۲۰,۰۰۰</td>
+                          <td>۱۴۰۰/۱۰/۲۰</td>
+                          <td>۱۴۰۰/۱۱/۰۹</td>
+                          <td>-</td>
+                          <td>منقضی شده</td>
+                      </tr>
+                      <tr>
+                          <th scope="row">Uj22QshNbE</th>
+                          <td>۱۰,۰۰۰</td>
+                          <td>۱۴۰۰/۱۰/۲</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>موجود</td>
+                      </tr>
+                      <tr>
+                          <th scope="row">BMi22Ygytc</th>
+                          <td>۲۰,۰۰۰</td>
+                          <td>۱۴۰۰/۱۰/۲</td>
+                          <td>۱۴۰۰/۱۰/۲۴</td>
+                          <td>-</td>
+                          <td>منقضی شده</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
