@@ -1,0 +1,52 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %} تایید ورود | گیفتز شاپ {% endblock %}
+{% block content %}
+    <div class="background-span">
+        <span></span>
+        <span></span>
+    </div>
+{#    <img class="img_singin" src="{% static 'img/333.png' %}">#}
+    <img class="img_singin2 d-none d-lg-block d-xl-block" src="{% static 'img/2.png' %}">
+
+<div class="container">
+{#    <div class="border-bottom"></div>#}
+    <div class="row justify-content-center">
+        <div class="col-lg-4 col-sm-12 col-md-12" style="padding-bottom: 190px; padding-top: 80px">
+            <div class="box_mute mt-3 pt-2" id="box_shadow" style="width: 100%;z-index: 2">
+                <form method="post" id="verify_otp" autocomplete="off" action="">
+                    {% csrf_token %}
+                    <div class="mb-2">
+                      <label class="form-label text-small d-flex justify-content-center">ورود به سیستم</label>
+                        <p style="font-size: 13px; text-align: center">برای فعال سازی لطفا کد تائید دریافت شده را وارد نمائید.</p>
+                        <div>
+                            <p style="text-align: center;font-size: 14px"> کد فعال سازی به شماره <span style="color:#31e765;"> ۰۹۱۲۰۰۰۱۲۰۰۰ </span> ارسال شده! </p>
+                        </div>
+                        <div class="mb-6 text-center">
+                            <div id="otp" class="inputs d-flex flex-row justify-content-center mt-2" style="direction: ltr;">
+                                <input class="combine m-2 text-center form-control rounded" name="otp_input" required="required" pattern=".{1,}" type="text" id="first" maxlength="1" />
+                                <input class="combine m-2 text-center form-control rounded" name="otp_input" required="required" pattern=".{1,}" type="text" id="second" maxlength="1" />
+                                <input class="combine m-2 text-center form-control rounded" name="otp_input" required="required" pattern=".{1,}" type="text" id="third" maxlength="1" />
+                                <input class="combine m-2 text-center form-control rounded" name="otp_input" required="required" pattern=".{1,}" type="text" id="fourth" maxlength="1" />
+                                <input class="combine m-2 text-center form-control rounded" name="otp_input" required="required" pattern=".{1,}" type="text" id="fifth" maxlength="1" />
+                                <input class="combine m-2 text-center form-control rounded" name="otp_input" required="required" pattern=".{1,}" type="text" id="sixth" maxlength="1" />
+                            </div>
+                        </div>
+{#                        <div class="input-group flex-nowrap" style="direction: ltr">#}
+{#                            <span class="input-group-text border-start-0 mt-4" id="addon-wrapping"><i class="bi bi-shield-lock"></i></span>#}
+{#                            <input id="yourphone" name="verify_phone" type="text" placeholder="کد را وارد کنید" class="form-control mt-4" maxlength="6" aria-describedby="addon-wrapping" style="text-align: center; direction: ltr">#}
+{#                        </div>#}
+                    </div>
+                    <div class="d-grid gap-2 mb-4 mt-4">
+                        <button class="btn btn-success" id="verify_otp" type="submit">تایید و ورود</button>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <span>اگر کدی را دریافت نکردید <a href="/" style="color: #17bd5b">کلیک</a> کنید!</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <textarea id="test" style="display: none;"></textarea>
+{% endblock content %}
