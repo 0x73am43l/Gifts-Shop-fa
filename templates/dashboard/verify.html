@@ -1,0 +1,98 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="row g-3">
+        <div class="col-3 d-none d-lg-block d-xl-block">
+            <div class="box_mute mt-4" style="height: 500px;padding: 0;">
+                {% include 'dashboard/dashboard-menu.html' %}
+            </div>
+        </div>
+        <div class="col">
+            <div class="box mt-4" style="height: auto;">
+                <div class="row d-flex justify-content-center pt-3">
+                    <h1 style="font-size: 1.3rem;color: white">احراز هویت کاربر</h1>
+                    <div class="col">
+                        <div class="mb-3">
+                          <label for="verify-input" class="form-label">نام</label>
+                          <input type="text" class="form-control" id="verify-input" placeholder="رضا">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="mb-3">
+                          <label for="verify-input" class="form-label">نام خانوادگی</label>
+                          <input type="text" class="form-control" id="verify-input" placeholder="ایرانی">
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-sm-center">
+                    <div class="col">
+                        <div class="mb-3">
+                          <label for="verify-input" class="form-label">شماره همراه</label>
+                          <input type="text" class="form-control" id="verify-input" placeholder="۰۹۱۲۰۰۰۱۲۰۰">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="mb-3">
+                          <label for="verify-input" class="form-label">تلفن ثابت</label>
+                          <input type="text" class="form-control" id="verify-input" placeholder="۰۲۱۱۲۰۲۰۰۰">
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="verify-input" class="form-label">ایمیل</label>
+                            <input type="email" class="form-control" id="verify-input" placeholder="email@local.com">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="verify-input" class="form-label">کد ملی</label>
+                            <input type="text" class="form-control" id="verify-input" placeholder="۵۷۶۰۰۱۲۴۳۲">
+                        </div>
+                    </div>
+                </div>
+                <h6>احراز مدارک شناسایی</h6>
+                <span>مدارک مورد نیاز:</span>
+                <p> تصویر سلفی از چهره خودتان با کارت ملی و یک تکه کاغذ حاوی تاریخ آن روز، امضا و کد تایید شما در گیفتز شاپ. </p>
+                <span style="color: #11ff5e"> نکات مهم: </span>
+                <ol>
+                    <li>چهره باید به صورت واضح در تصویر مشخص باشد.</li>
+                    <li>اطلاعات کارت ملی باید دقیق و خوانا باشد.</li>
+                    <li>کد تایید باید دقیقا مطابق با کدی باشد که در قسمت ذیل درج شده است.</li>
+                </ol>
+                <div class="row d-flex mb-4">
+                    <div class="col">
+                        <span> کد تایید شما:<strong style="font-size: 20px;"> ۲۳۱۲۵۷ </strong></span>
+                    </div>
+                    <div class="col d-grid">
+                        <button class="btn btn-info" type="button">نمونه</button>
+                    </div>
+                    <div class="col d-grid">
+                        <button class="btn btn-success" type="button">بارگذاری مدرک</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="table-responsive">
+                    <table class="table table-hover table-dark">
+                      <thead class="table-dark">
+                        <tr>
+                            <th scope="col">تاریخ بارگذاری</th>
+                            <th class="col-4">توضیحات</th>
+                            <th scope="col">وضعیت</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                          <th scope="row">۱۲:۰۶ | ۱۴۰۰/۱۲/۲</th>
+                          <td>-</td>
+                          <td>تایید شده</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
