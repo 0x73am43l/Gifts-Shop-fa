@@ -1,0 +1,106 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="background-span">
+        <span></span>
+        <span></span>
+    </div>
+{#<div class="container">#}
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="box mt-4" style="height: auto;">
+            <div class="col mb-5">
+                <div class="col mb-3 pt-4">
+                    <h6>🛒 سبد خرید</h6>
+                    <span>خوشحالیم که محصولات ما نظرتون رو جلب کرده از این قسمت میتونید مقدار مورد نیازتون رو تغییر بدید</span>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover table-dark">
+                      <thead class="table-dark">
+                        <tr>
+                            <th class="col">ردیف</th>
+                            <th scope="col">نام محصول</th>
+                            <th scope="col">تعداد</th>
+                            <th scope="col"> مبلغ <span style="font-size: 11px;">(تومان)</span></th>
+                            <th scope="col">مبلغ کل</th>
+                            <th scope="col">حذف</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                          <th scope="row">۱</th>
+                          <td>استیم گیفت ۱۰۰ پزو</td>
+                          <td>2</td>
+                          <td>۴۲,۰۰۰</td>
+                          <td>-</td>
+                          <td>❌</td>
+                      </tr>
+                      <tr>
+                          <th scope="row">۲</th>
+                          <td>گیفت گوگل پلی ۱۰ دلار</td>
+                          <td>1</td>
+                          <td>۱۲۰,۰۰۰</td>
+                          <td>-</td>
+                          <td>❌</td>
+                      </tr>
+                      <tr>
+                          <th scope="row">۳</th>
+                          <td>استیم گیفت ۱۰۰ پزو</td>
+                          <td>3</td>
+                          <td>۲۰</td>
+                          <td>-</td>
+                          <td>❌</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="table-responsive">
+                    <table class="table table-dark-price">
+                      <tbody>
+                      <tr>
+                          <th class="col-6">😭 جمع کل</th>
+                          <th class="col-6">۰ تومان</th>
+                      </tr>
+                      <tr>
+                          <th class="col-6"> 🤑 تخفیف</th>
+                          <th class="col-6">۰ تومان</th>
+                      </tr>
+                      <tr>
+                          <th class="col-6">🤩 امتیازات</th>
+                          <th class="col-6">۰ تومان</th>
+                      </tr>
+                      <tr>
+                          <th class="col-6">🥳 قابل پرداخت</th>
+                          <th class="col-6">۰ تومان</th>
+                      </tr>
+                      </tbody>
+                      <tfoot>
+                      <td colspan="6">
+                          <span>♻️ بعد از این پرداخت 0 امتیاز به حسابتان اضافه می شود ️</span>
+                      </td>
+                      </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="row d-flex">
+                <div class="col-lg-4 col-sm-12 col-md-12">
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="کد تخفیف خود را وارد کنید" aria-label="Recipient's username" aria-describedby="button-addon2" style="text-align: center;">
+                      <button class="btn btn-success" type="button" id="button-addon2">بررسی</button>
+                    </div>
+
+                </div>
+                <div class="col-lg-8 col-sm-12 col-md-12 d-flex justify-content-end">
+                    {% comment %} <button class="btn-s" type="button"><span class="btn_text">💰 پرداخت و تحویل</span></button> {% endcomment %}
+                    <button type="button" class="btn btn-success btn-lg">💰 پرداخت و تحویل</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+{#</div>#}
+
+{% endblock content %}
