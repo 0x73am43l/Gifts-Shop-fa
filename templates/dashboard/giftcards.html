@@ -1,0 +1,51 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="row g-3">
+        <div class="col-3 d-none d-lg-block d-xl-block">
+            <div class="box_mute mt-4" style="height: 500px;padding: 0;">
+                {% include 'dashboard/dashboard-menu.html' %}
+            </div>
+        </div>
+        <div class="col">
+            <div class="box mt-4" style="height: 500px;">
+                <div class="col mb-3 pt-4">
+                    <h6>🎁 گیفت‌کارت های من</h6>
+                    <span>از این قسمت میتونید گیفت گیفت کارت های خود را مشاهده کنید</span>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover table-dark">
+                      <thead class="table-dark">
+                        <tr>
+                            <th scope="col">محصول</th>
+                            <th class="col-4">کد گیفت کارت</th>
+                            <th scope="col">تاریخ</th>
+                            <th scope="col">آموزش شارژ</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                          <th scope="row">استیم گیفت ۱۰۰ پزو</th>
+                          <td>2IHN4-8YMAE-XGK36</td>
+                          <td>۱۲:۰۶ | ۱۴۰۰/۱۲/۲</td>
+                          <td><a href="{% url 'how_to_redeem' %}">لینک</a></td>
+                      </tr>
+                      <tr>
+                          <th scope="row">استیم گیفت ۲۰۰ پزو</th>
+                          <td>J54MF-ENDZ8-0MYNY</td>
+                          <td>۱۵:۳۵ | ۱۴۰۰/۱۰/۷</td>
+                          <td><a href="{% url 'how_to_redeem' %}">لینک</a></td>
+                      </tr>
+                      <tr>
+                          <th scope="row">استیم گیفت ۱۰۰ پزو</th>
+                          <td>V4GNV-MX247-8AFE5</td>
+                          <td>۲۱:۱۵ | ۱۴۰۰/۱۱/۱۶</td>
+                          <td><a href="{% url 'how_to_redeem' %}">لینک</a></td>
+                      </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
