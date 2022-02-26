@@ -1,18 +1,18 @@
 {% extends 'base/base.html' %}
 {% load static %}
 {% block content %}
-<div class="container">
+{#<div class="container">#}
     <div class="row g-3">
-        <div class="col-3">
-            <div class="box mt-4" style="height: 500px;padding: 0;">
+        <div class="col-3 d-none d-lg-block d-xl-block">
+            <div class="box_mute mt-4" style="height: 500px;padding: 0;">
                 {% include 'dashboard/dashboard-menu.html' %}
             </div>
         </div>
-        <div class="col">
+        <div class="col-lg-8 col-sm-12 col-md-12">
             <div class="box mt-4" style="height: 500px;">
 
             </div>
         </div>
     </div>
-</div>
+{#</div>#}
 {% endblock content %}
