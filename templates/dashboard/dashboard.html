@@ -1,29 +1,52 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% block title %} داشبورد | گیفتز شاپ {% endblock %}
 {% block content %}
     <div class="background-span">
         <span></span>
         <span></span>
     </div>
-    <div class="container">
+{#    <div class="container">#}
         <div class="row g-3">
-            <div class="col-3">
+            <div class="col-3 d-none d-lg-block d-xl-block">
                 <div class="box_mute mt-4" style="height: 500px;padding: 0;">
                     {% include 'dashboard/dashboard-menu.html' %}
                 </div>
             </div>
-            <div class="col">
+            <div class="col-lg-9 col-sm-12 col-md-12">
                 <div class="box mt-4" style="height: 500px;">
                     <div class="row pt-5">
-                        <div class="col d-flex justify-content-center">
-                            <span>Hello Farshad</span>
+                        <div class="col">
+                            <div>
+                                <h6>معرفی دوستان</h6>
+                            </div>
+                            <div>
+                                 <p>با لینک زیر دوستان خود را معرفی کنید و پس از ثبتنام و اولین خرید آنها، 50 امتیاز دریافت کنید!</p>
+                            </div>
                         </div>
                         <div class="col d-flex justify-content-center">
-                            <span>Hello Farshad</span>
+                            <div class="profile-pic">
+                              <label class="-label" for="file">
+{#                                <span></span>#}
+                                <span id="change_pic"><i class="bi bi-camera-fill"></i> تغییر آواتار </span>
+                              </label>
+                              <input id="file" type="file" onchange="loadFile(event)"/>
+                              <img src="{% static 'img/ava.jpg' %}" id="output" width="200"  alt="avatar"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="col">
+                            </div>
+                        </div>
+
+                        <div class="col d-flex justify-content-center pt-3">
+                                <h6>آرش عزیز خوش اومدی 🤠</h6>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+{#    </div>#}
 {% endblock content %}
