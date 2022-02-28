@@ -6,7 +6,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    {% if site_setting.meta_description %}
+    <meta name="description" content="{{ site_setting.meta_description }}">
+    {% else %}
     <meta name="description" content="خرید گیفت کارت ارزان گیفز شاپ ، فروشگاه تخصصی خرید گیفت کارت ✦ استیم ،گوگل پلی ، ایکس باکس ، اپل ✦ تظمین اورجینال ، پشتیبانی 24 ساعته ، تحویل فوری.">
+    {% endif %}
     <title>گیفت شاپ - مرجع خرید گیفت کارت 🎁</title>
     <link rel="stylesheet" href="{% static 'css/bootstrap.rtl.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -16,7 +20,7 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
 
-    <link rel="icon" type="image/png" href="{% static 'img/favicon1.png' %}"/>
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
 
     <!BEGIN RAYCHAT CODE-->
     <script type="text/javascript">!function(){function t(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,localStorage.getItem("rayToken")?t.src="https://app.raychat.io/scripts/js/"+o+"?rid="+localStorage.getItem("rayToken")+"&href="+window.location.href:t.src="https://app.raychat.io/scripts/js/"+o+"?href="+window.location.href;var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}var e=document,a=window,o="00467a1c-84bf-4aa7-a8f7-cec5a2f2c617";"complete"==e.readyState?t():a.attachEvent?a.attachEvent("onload",t):a.addEventListener("load",t,!1)}();</script>
