@@ -2,8 +2,16 @@
 <header class="p-2 mb-1">
     <div class="container">
         <div class="d-flex justify-content-between menu-container">
-            <div class="logo d-flex justify-content-sm-end"><a href="/"><img src="{% static 'img/Logo.png' %}" alt="logo" width="42" height="42" style="margin-left: 10px;" aria-label="logo"></a></div>
-            <ul class="nav col-sm-8 col-md-9 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0" style="font-weight: bold;">
+            <div class="logo d-flex justify-content-sm-end">
+                <a href="{% url 'Home' %}">
+                    {% if site_setting.logo %}
+                        <img src="{{ site_setting.logo.url }}" alt="logo" width="42" height="42" style="margin-left: 10px;" aria-label="logo">
+                    {% else %}
+                        <img src="{% static 'img/Logo.png' %}" alt="logo" width="42" height="42" style="margin-left: 10px;" aria-label="logo">
+                    {% endif %}
+                </a>
+            </div>
+            <ul class="nav col-sm-8 col-md-6 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0" style="font-weight: bold;">
                 <li><a href="/" class="d-none d-lg-block nav-link px-2 link-secondary text-velo hover-underline-animation">صفحه اصلی</a></li>
                 <li class="dropdown mega-dropdown d-none d-lg-block">
                     <a class="nav-link dropdown-toggle text-velo" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -50,7 +58,7 @@
                     </ul>
                 </div>
                 {% else %}
-                    <a href="{% url 'signin' %}" class="d-block btn btn-outline-secondary cart-btn link-green position-relative" style="margin-right: 10px;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="ورود / ثبت نام">
+                    <a href="{% url 'signin' %}" class="d-block btn btn-outline-secondary cart-btn link-green position-relative" style="margin-right: 10px; border: solid 2px var(--border-color);" data-bs-toggle="tooltip" data-bs-placement="bottom" title="ورود / ثبت نام">
                         <i class="bi bi-person-plus-fill"></i>
                     </a>
                 {% endif %}
