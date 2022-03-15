@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_otp.plugins.otp_totp',
+    'django_otp',
     'debug_toolbar',
     'ckeditor',
     'azbankgateways',
@@ -49,6 +51,7 @@ INSTALLED_APPS = [
     'apps.game',
     'apps.payments',
     'apps.products',
+    'apps.coupon',
     'apps.web',
 ]
 
@@ -62,6 +65,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_otp.middleware.OTPMiddleware',
 ]
 
 INTERNAL_IPS = [
