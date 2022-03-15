@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django_otp.admin import OTPAdminSite
 from azbankgateways.urls import az_bank_gateways_urls
 
+admin.site.__class__ = OTPAdminSite
 admin.site.site_header = 'داشبورد گیفتز شاپ'                    # default: "Django Administration"
 admin.site.index_title = 'مدیریت'                 # default: "Site administration"
 admin.site.site_title = 'داشبورد گیفتز شاپ'
