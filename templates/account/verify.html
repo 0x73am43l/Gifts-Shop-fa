@@ -2,6 +2,7 @@
 {% load static %}
 {% block title %} تایید ورود | گیفتز شاپ {% endblock %}
 {% block content %}
+{% load en2fa %}
     <div class="background-span">
         <span></span>
         <span></span>
@@ -20,16 +21,16 @@
                       <label class="form-label text-small d-flex justify-content-center">ورود به سیستم</label>
                         <p style="font-size: 13px; text-align: center">برای فعال سازی لطفا کد تائید دریافت شده را وارد نمائید.</p>
                         <div>
-                            <p style="text-align: center;font-size: 14px"> کد فعال سازی به شماره <span style="color:#31e765;"> ۰۹۱۲۰۰۰۱۲۰۰۰ </span> ارسال شده! </p>
+                            <p style="text-align: center;font-size: 14px"> کد فعال سازی به شماره <span style="color:#31e765;">{{ mobile|persian_digits }}</span> ارسال شده! </p>
                         </div>
                         <div class="mb-6 text-center">
                             <div id="otp" class="inputs d-flex flex-row justify-content-center mt-2" style="direction: ltr;">
-                                <input class="combine m-2 text-center form-control rounded" name="otp_input" required="required" pattern=".{1,}" type="text" id="first" maxlength="1" />
-                                <input class="combine m-2 text-center form-control rounded" name="otp_input" required="required" pattern=".{1,}" type="text" id="second" maxlength="1" />
-                                <input class="combine m-2 text-center form-control rounded" name="otp_input" required="required" pattern=".{1,}" type="text" id="third" maxlength="1" />
-                                <input class="combine m-2 text-center form-control rounded" name="otp_input" required="required" pattern=".{1,}" type="text" id="fourth" maxlength="1" />
-                                <input class="combine m-2 text-center form-control rounded" name="otp_input" required="required" pattern=".{1,}" type="text" id="fifth" maxlength="1" />
-                                <input class="combine m-2 text-center form-control rounded" name="otp_input" required="required" pattern=".{1,}" type="text" id="sixth" maxlength="1" />
+                                <input class="combine m-1 text-center form-control rounded" name="otp_input" required="required" pattern=".{1,}" type="text" id="first" maxlength="1" />
+                                <input class="combine m-1 text-center form-control rounded" name="otp_input" required="required" pattern=".{1,}" type="text" id="second" maxlength="1" />
+                                <input class="combine m-1 text-center form-control rounded" name="otp_input" required="required" pattern=".{1,}" type="text" id="third" maxlength="1" />
+                                <input class="combine m-1 text-center form-control rounded" name="otp_input" required="required" pattern=".{1,}" type="text" id="fourth" maxlength="1" />
+                                <input class="combine m-1 text-center form-control rounded" name="otp_input" required="required" pattern=".{1,}" type="text" id="fifth" maxlength="1" />
+                                <input class="combine m-1 text-center form-control rounded" name="otp_input" required="required" pattern=".{1,}" type="text" id="sixth" maxlength="1" />
                             </div>
                         </div>
 {#                        <div class="input-group flex-nowrap" style="direction: ltr">#}
@@ -48,5 +49,5 @@
         </div>
     </div>
 </div>
-    <textarea id="test" style="display: none;"></textarea>
+<textarea id="otp_numbers" style="display: none;"></textarea>
 {% endblock content %}
