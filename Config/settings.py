@@ -193,6 +193,8 @@ AZ_IRANIAN_BANK_GATEWAYS = {
 
 AUTH_USER_MODEL = 'account.MyUser'
 
+SESSION_COOKIE_SECURE = True
+
 GHASEDAK_API = config('GHASEDAK')
 
 # Celery
