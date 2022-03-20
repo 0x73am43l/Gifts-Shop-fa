@@ -21,7 +21,7 @@
                       <label class="form-label text-small d-flex justify-content-center">ورود به سیستم</label>
                         <p style="font-size: 13px; text-align: center">برای فعال سازی لطفا کد تائید دریافت شده را وارد نمائید.</p>
                         <div>
-                            <p style="text-align: center;font-size: 14px"> کد فعال سازی به شماره <span style="color:#31e765;">{{ mobile|persian_digits }}</span> ارسال شده! </p>
+                            <p style="text-align: center;font-size: 14px"> کد فعال سازی به شماره <span style="color:#31e765;">{{ user|persian_digits }}</span> ارسال شده! </p>
                         </div>
                         <div class="mb-6 text-center">
                             <div id="otp" class="inputs d-flex flex-row justify-content-center mt-2" style="direction: ltr;">
@@ -49,5 +49,5 @@
         </div>
     </div>
 </div>
-<textarea id="otp_numbers" style="display: none;"></textarea>
+<input type="number" id="otp_numbers" style="display: none">
 {% endblock content %}
