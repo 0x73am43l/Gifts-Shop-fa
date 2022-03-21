@@ -27,12 +27,13 @@
                         <p style="font-size: 13px; text-align: center">لطفا شماره موبایل خود را وارد کرده و سپس کد تائید پیامک شده را وارد نمائید.</p>
                         <div class="input-group flex-nowrap" style="direction: ltr">
                             <span class="input-group-text border-start-0 mt-4" id="addon-wrapping">+۹۸</span>
-                            <input id="yourphone" name="phone" type="text" class="form-control mt-4" placeholder="(۹۱۲) ۱۲۰-۱۲۰۰" maxlength="10" aria-describedby="addon-wrapping" style="text-align: center; direction: ltr" required>
+                            {{ form }}
+                            <!-- <input id="yourphone" name="phone" type="text" class="form-control mt-4" placeholder="(۹۱۲) ۱۲۰-۱۲۰۰" pattern=".{10,}" maxlength="10" oninvalid="setCustomValidity('شماره شما باید ۱۰ رقم باشد')" oninput="setCustomValidity('')" aria-describedby="addon-wrapping" style="text-align: center; direction: ltr" required> -->
                         </div>
                     </div>
                     <div class="d-grid gap-2 mb-4 mt-4">
                         <button class="btn btn-success" id="send_otp" type="submit">ارسال کد تایید
-                          <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true" style="color: #2a2a2a;"></span>
+{#                          <span class="spinner-grow spinner-grow-sm" role="status" style="color: #2a2a2a"></span>#}
                         </button>
                     </div>
                 </form>
