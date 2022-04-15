@@ -17,20 +17,20 @@ $(document).ready(function() {
 });
 
 /* Select Product */
-$(document).ready(function (){
-    $("input[name$='select_region']").click(function(){
-        var inputValue = $(this).attr("value");
-        var target =$("." + inputValue);
-        $('.prices').not(target).hide();
-        $(target).show();
-    });
-    $("input[name$='select_prices']").click(function(){
-        var inputValue = $(this).attr("value");
-        var target =$("." + inputValue);
-        $('span #price').not(target).hide();
-        $(target).show();
-    });
-});
+// $(document).ready(function (){
+//     $("input[name$='select_region']").click(function(){
+//         var inputValue = $(this).attr("value");
+//         var target =$("." + inputValue);
+//         $('.prices').not(target).hide();
+//         $(target).show();
+//     });
+//     $("input[name$='select_prices']").click(function(){
+//         var inputValue = $(this).attr("value");
+//         var target =$("." + inputValue);
+//         $('span #price').not(target).hide();
+//         $(target).show();
+//     });
+// });
 
 /*  EnglishToPersian  */
 $(function () {
@@ -80,6 +80,80 @@ $('#send_otp').on('click', function() {
     }
 });
 
-/* Send OTP With Ajax */
+/* Send OTP With Spinner+Ajax */
 
-/* Dashboard Menu Change Icon */
+jQuery(function ($){
+    $('#yourphone').keyup(function (){
+        if ($(this).val().length == 10) {
+            $(document).ajaxSend(function () {
+                $('spinner-grow').fadeIn(500);
+                var loading = '<div class="spinner-grow spinner-grow-sm" role="status" style="color: #2a2a2a"></div>&nbsp;&nbsp;در حال ارسال کد...'
+                $('#send_otp').html(loading);
+             });
+           $('#send_otp').click(function (){
+               $.ajax({
+                   type: 'PUT',
+                   headers: {
+                        'X-CSRFToken': $('input[name=csrfmiddlewaretoken]').val()
+                        // "X-CSRFToken": '{{csrf_token}}',
+                   },
+               }).done(function (){
+                   setTimeout(function (){
+                       $('spinner-grow').fadeOut(500);
+                   },700);
+               })
+           })
+        }
+    })
+})
+
+/* Select Product Item */
+$(document).ready(function() {
+    $('.region-item').click(function () {
+        var i;
+        var tabshow = jQuery(this).attr('tabSHow');
+        var buyingTab = jQuery(this).attr('buyingtab');
+        var x = document.getElementsByClassName("charge");
+
+        for (i = 0; i < x.length; i++) {
+            x[i].classList.remove("activetab");
+        }
+        var region_item = document.getElementsByClassName("region-item");
+        for (i = 0; i < region_item.length; i++) {
+            region_item[i].classList.remove("active");
+        }
+        var PriceTab = document.getElementsByClassName("buy-btn");
+        for (i = 0; i < PriceTab.length; i++) {
+            PriceTab[i].classList.remove("activeBy");
+        }
+        var BuySections = document.getElementsByClassName("buysections");
+        for (i = 0; i < BuySections.length; i++) {
+            BuySections[i].classList.remove("activeBuying");
+        }
+        $('#' + tabshow).addClass('activetab');
+        $('#buyingTabnoSelect').addClass('activeBuying');
+        $(this).addClass('active');
+        $('#buyingTabnoSelect .priceTabcontent:first-child').addClass('activeBy');
+    });
+
+    $('.charge-item').click(function () {
+        var tabshow = jQuery(this).attr('showpricetab');
+        var buyingTab = jQuery(this).attr('buyingtab');
+        var i;
+        var x = document.getElementsByClassName("buy-btn");
+        for (i = 0; i < x.length; i++) {
+            x[i].classList.remove("activeBy");
+        }
+        var M = document.getElementsByClassName("charge-item");
+        for (i = 0; i < M.length; i++) {
+            M[i].classList.remove("active");
+        }
+        var BuySections = document.getElementsByClassName("buysections");
+        for (i = 0; i < BuySections.length; i++) {
+            BuySections[i].classList.remove("activeBuying");
+        }
+        $('#' + tabshow).addClass('activeBy');
+        $('#' + buyingTab).addClass('activeBuying');
+        $(this).addClass('active');
+    });
+});
