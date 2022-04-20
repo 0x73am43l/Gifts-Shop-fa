@@ -1,10 +1,17 @@
 from django.conf import settings
-from random import randint
 import ghasedakpack
+import secrets
+import string
+
+
+# from random import randint
 
 
 def get_random_otp():
-    return randint(100000, 999999)
+    # return randint(100000, 999999)
+    num = string.digits
+    otp_num = ''.join(secrets.choice(num) for i in range(6))
+    return otp_num
 
 
 def send_otp(phone, otp_rnd):
