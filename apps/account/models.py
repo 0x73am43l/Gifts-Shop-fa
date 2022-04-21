@@ -11,7 +11,8 @@ class MyUser(AbstractUser):
     username = models.CharField(max_length=25, unique=True, blank=True, null=True, verbose_name='نام کاربری')
     email = models.EmailField(unique=True, blank=True, null=True, verbose_name="ایمیل")
     phone = models.CharField(validators=[phone_regex], max_length=11, unique=True, verbose_name="موبایل")
-    otp = models.PositiveIntegerField(blank=True, null=True, verbose_name="کد OTP")
+    # otp = models.PositiveIntegerField(blank=True, null=True, verbose_name="کد OTP")
+    otp = models.CharField(max_length=8, blank=True, null=True, verbose_name="کد OTP")
     otp_create_time = models.DateTimeField(auto_now=True, verbose_name="تاریخ ایجاد OTP")
     is_active = models.BooleanField(default=False, verbose_name='فعال')
 
