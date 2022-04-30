@@ -1,0 +1,55 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="row g-3">
+        <div class="col-3 d-none d-lg-block d-xl-block">
+            <div class="box_mute mt-4" style="height: 500px;padding: 0;">
+                {% include 'dashboard/dashboard-menu.html' %}
+            </div>
+        </div>
+        <div class="col">
+            <div class="box mt-4" style="height: 500px;">
+                <div class="col mb-3 pt-4">
+                    <h6>📊 صورت‌حساب ها</h6>
+                    <span>از این قسمت میتونید صورت حساب ها و امتیاز های دریافتی از آنهارو مشاهده کنید</span>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover table-dark">
+                      <thead class="table-dark">
+                        <tr>
+                          <th class="col-3">شماره فاکتور</th>
+                          <th scope="col">مبلغ کل</th>
+                          <th scope="col">تاریخ</th>
+                          <th scope="col">امتیاز</th>
+                          <th scope="col">وضعیت</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                          <th scope="row">۲۳۴۱</th>
+                          <td>۲۰۰,۰۰۰</td>
+                          <td>۱۴۰۰/۱۰/۲۰</td>
+                          <td>۵۰</td>
+                          <td>انجام شده</td>
+                      </tr>
+                      <tr>
+                          <th scope="row">۲۳۵۱</th>
+                          <td>۴۰,۰۰۰</td>
+                          <td>۱۴۰۰/۱۰/۲</td>
+                          <td>-</td>
+                          <td>کنسل شده</td>
+                      </tr>
+                      <tr>
+                          <th scope="row">۲۲۴۲</th>
+                          <td>۲۸,۰۰۰</td>
+                          <td>۱۴۰۰/۱۰/۲</td>
+                          <td>۲۰</td>
+                          <td>در حال انجام</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
