@@ -3,6 +3,10 @@
 
 {% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
 
+{% block extrahead %}
+    <link rel="icon" href="{% static 'img/favicon-a.png' %}" sizes="48x48" />
+{% endblock %}
+
 {% block branding %}
 <h1 id="site-name"><a href="{% url 'admin:index' %}"><img src="{% static 'img/logo-a.png' %}" height="40px"/> {{ site_header|default:_('Django administration') }}</a></h1>
 {% endblock %}
