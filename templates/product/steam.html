@@ -1,0 +1,267 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="background-span">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+        <!-- <div class="border-bottom"></div> -->
+        <div class="row">
+            <div class="col d-none d-lg-block d-xl-block">
+                <div class="box mt-4" id="test" style="height: 400px;padding-top: 10px;">
+                    <div class="col d-flex justify-content-center">
+                        <img src="{% static 'img/steam-fa.webp' %}" alt="" width="100%" height="380" style="border-radius: 10px;">
+
+                    </div>
+{#                    <div class="col">#}
+{#                        <h4 style="text-align: center;">استیم گیفت</h4>#}
+{#                        <p style="text-align: center;">خرید ارزان استیم گیفت</p>#}
+{#                    </div>#}
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-8">
+                <div class="box mt-4" id="test2" style="height: 400px;padding-top: 10px;">
+                    <h6>ابتدا ریجن مورد نظر خود را انتخاب کنید:</h6>
+                    <div class="row">
+                        <div class="col d-flex justify-content-center gap-2 g-2">
+{#                            <div>#}
+{#                                <input type="radio" id="control_01" name="select_region" value="A">#}
+{#                                <label id="radio" for="control_01">#}
+{#                                    <img src="{% static 'img/cards/flag/arg-flag.png' %}" alt="">#}
+{#                                    <span>آرژانتین</span>#}
+{#                                </label>#}
+{#                            </div>#}
+{#                            <div>#}
+{#                                <input type="radio" id="control_02" name="select_region" value="B">#}
+{#                                <label id="radio" for="control_02">#}
+{#                                    <img src="{% static 'img/cards/flag/usa-flag.png' %}" alt="">#}
+{#                                    <span>گلوبال</span>#}
+{#                                </label>#}
+{#                            </div>#}
+{#                            <div>#}
+{#                                <input type="radio" id="control_03" name="select_region" value="C">#}
+{#                                <label id="radio" for="control_03">#}
+{#                                    <img src="{% static 'img/cards/flag/turk-flag.png' %}" alt="">#}
+{#                                    <span>ترکیه</span>#}
+{#                                </label>#}
+{#                            </div>#}
+{#                            <div>#}
+{#                                <input type="radio" id="control_04" name="select_region" value="4">#}
+{#                                <label id="radio" for="control_04">#}
+{#                                    <img src="{% static 'img/cards/flag/rus-flag.png' %}" alt="">#}
+{#                                    <span>روسیه</span>#}
+{#                                </label>#}
+{#                            </div>#}
+{#                            <div>#}
+{#                                <input type="radio" id="control_05" name="select_region" value="5">#}
+{#                                <label id="radio" for="control_05">#}
+{#                                    <img src="{% static 'img/cards/flag/eru-flag.png' %}" alt="">#}
+{#                                    <span>اروپا</span>#}
+{#                                </label>#}
+{#                            </div>#}
+{#                            <div>#}
+{#                                <input type="radio" id="control_06" name="select_region" value="6" >#}
+{#                                <label id="radio" for="control_06">#}
+{#                                    <img src="{% static 'img/cards/flag/ind-flag.png' %}" alt="">#}
+{#                                    <span>هند</span>#}
+{#                                </label>#}
+{#                            </div>#}
+{#                            <div>#}
+{#                                <input type="radio" id="control_07" name="select_region" value="7" >#}
+{#                                <label id="radio" for="control_07">#}
+{#                                    <img src="{% static 'img/cards/flag/brz-flag.png' %}" alt="">#}
+{#                                    <span>برزیل</span>#}
+{#                                </label>#}
+{#                            </div>#}
+{##}
+                        </div>
+                    </div>
+                    <br>
+                    <h6>حالا مقدار مورد نیاز خود را انتخاب کنید:</h6>
+                    <div class="row">
+                        <div class="col d-flex justify-content-center gap-2 g-2">
+
+{#                            <select class="prices A" name="work_days" id="select_prices" multiple>#}
+{#                                <option value="1">۱۰۰ ARS</option>#}
+{#                                <option value="2">۲۰۰ ARS</option>#}
+{#                                <option value="3">۳۰۰ ARS</option>#}
+{#                                <option value="4">۵۰۰ ARS</option>#}
+{#                                <option value="5">۱۰۰۰ ARS</option>#}
+{#                              </select>#}
+{##}
+{#                              <select class="prices B" name="work_days" id="select_prices" multiple>#}
+{#                                <option value="1">1 $</option>#}
+{#                                <option value="2">2 $</option>#}
+{#                                <option value="3">5 $</option>#}
+{#                                <option value="4">10 $</option>#}
+{#                                <option value="5">20 $</option>#}
+{#                              </select>#}
+
+
+
+
+                            <!-- <div class="prices A" data-period="A">
+                                <input type="radio" id="control_10" name="select_prices" data-period="A" >
+                                <label id="radio" for="control_10">
+                                    <span id="pc">100 ars</span>
+                                </label>
+                            </div>
+                            <div class="prices A" data-period="A">
+                                <input type="radio" id="control_11" name="select_prices" data-period="A" >
+                                <label id="radio" for="control_11">
+                                    <span id="pc">200 ars</span>
+                                </label>
+                            </div>
+                            <div class="prices A" data-period="A">
+                                <input type="radio" id="control_12" name="select_prices" data-period="A" >
+                                <label id="radio" for="control_12">
+                                    <span id="pc">300 ars</span>
+                                </label>
+                            </div>
+                            <div class="prices A" data-period="A">
+                                <input type="radio" id="control_13" name="select_prices" data-period="A" >
+                                <label id="radio" for="control_13">
+                                    <span id="pc">500 ars</span>
+                                </label>
+                            </div>
+                            <div class="prices A" data-period="A">
+                                <input type="radio" id="control_14" name="select_prices" data-period="A" >
+                                <label id="radio" for="control_14">
+                                    <span id="pc">1000 ars</span>
+                                </label>
+                            </div> -->
+
+                            <!-- <div class="prices A" data-period="A">A 1</div>
+                            <div class="prices B" data-period="B">B 1</div>
+                            <div class="prices C" data-period="C">C 1</div>
+
+                            <div class="prices A" data-period="A">A 2</div>
+                            <div class="prices B" data-period="B">B 2</div>
+                            <div class="prices C" data-period="C">C 2</div>
+
+                            <div class="prices" data-period="A">A 2</div>
+                            <div class="prices" data-period="B">B 2</div>
+                            <div class="prices" data-period="C">C 3</div> -->
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col g-5">
+                            <div class="text-velo">قیمت:</div>
+                            <span id="price">۴۱۰۰۰</span> <span>تومان</span>
+                        </div>
+                        <div class="col-5 d-grid g-5 d-flex justify-content-end">
+                            <button type="button" class="btn btn-success btn-lg"> افزودن به سبد خرید 🛒</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center mt-3">
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                <img src="{% static 'img/header/1.png' %}" alt="" style="width: 260px;">
+                {% comment %} <div class="box_mute mt-4" style="height: 50px;">
+                    <div class="col d-flex justify-content-center">
+                        <h6 style="margin-top: 12px;">تحویل به چه صورت است ؟</h6>
+                    </div>
+                </div> {% endcomment %}
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                <img src="{% static 'img/header/2.png' %}" alt="" style="width: 260px;">
+                {% comment %} <div class="box_mute mt-4" style="height: 50px;">
+                    <div class="col d-flex justify-content-center">
+                        <h6 style="margin-top: 12px;">کدوم ریجن بهتره ؟</h6>
+                    </div>
+                </div> {% endcomment %}
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4 d-flex justify-content-center">
+                <img src="{% static 'img/header/3.png' %}" alt="" style="width: 260px;">
+                {% comment %} <div class="box_mute mt-4" style="height: 50px;">
+                    <div class="col d-flex justify-content-center">
+                        <h6 style="margin-top: 12px;">چطور استفاده کنیم ؟</h6>
+                    </div>
+                </div> {% endcomment %}
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="box_mute mt-4" style="height: auto;">
+                <ul class="nav nav-tabs" id="myTab" role="tablist" style="padding-top: 5px;">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">توضیحات</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">سوالات متداول</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">نظرات</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active mt-3" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div>
+                            <span class="text-velo">
+                                توضیحاتی راجب گیفت کارت یا گیم مورد نظر
+                            </span>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div>
+                            <span class="text-velo">
+
+                                <div class="accordion mt-3" id="accordionExample">
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                          گیفت کارت استیم والت چیست ؟
+                                        </button>
+                                      </h2>
+                                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>استیم والت یا همان Steam wallet پلتفرم توزیع دیجیتال برای مدیریت بازی های دیجیتال تحت کامپیوتر و متعلق به شرکت والو است ، استیم برای توزیع بازی‌های رایانه‌ای و رسانه‌های مرتبط استفاده میشود ، جهت خرید بازی های کامپیوتری و استفاده از نسخه اصلی و بازی آنلاین نیاز به شارژ حساب استیم خود از طریق خرید استیم والت دارید .</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                          تفاوت استیم والت آرژانتین و آمریکا در چیست ؟ کدام را خریداری کنیم ؟
+                                        </button>
+                                      </h2>
+                                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>شرکت والو (استیم) برای استور ها در کشور های مختلف گیفت کارت های همان کشور را با واحد های ارزی متفاوت ارائه میدهد ، به طور مثال گیفت کارت استیم آمریکا به صورت دلاری و فقط در اکانت استیم والت متعلق به همین کشور قابل شارژ هستند ، با توجه به حساسیت این موضوع و عدم امکان تعویض گیفت کارت قبل از خرید از کشور اکانت استیم خود اطمینان حاصل فرمایید .</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                          آیا گیفت کارت های استیم والت امکان تعویض یا مرجوعی دارند ؟
+                                        </button>
+                                      </h2>
+                                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>متاسفانه با توجه به اینکه بلافاصله پس از خرید کد گیفت کارت قابل استفاده و رویت میباشد امکان تعویض با بازگشت هزینه گیفت کارت های استیم ممکن نیست . در صورتی که در مواردی بسیار نادر کد گیفت کارت مشکل داشته و بلااستفاده باشد ، پس از استعلام زمان استفاده شدن گیف کارت از شرکت والو (استیم) ، در صورتی که زمان استفاده از کد گیفت کارت بعد از خرید شما نباشد ، به انتخاب شما یا مبلغ شما استرداد و یا کد جایگزین ارسال خواهد شد . استعلام و پیگیری این مورد ها بلافاصله بعد از درخواست شما از سمت ما انجام خواهد شد و معمولا از 24 تا 72 ساعت پاسخ داده میشوند . </p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                            </span>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade mt-3" id="contact" role="tabpanel" aria-labelledby="contact-tab" overflow="Scrollbar">
+                        <div>
+                            <span class="text-velo">
+                                نظرات در این قسمت قرار میگیرد
+                            </span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+{% endblock content %}
