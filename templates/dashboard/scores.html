@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="row g-3">
+        <div class="col-3 d-none d-lg-block d-xl-block">
+            <div class="box_mute mt-4" style="height: 500px;padding: 0;">
+                {% include 'dashboard/dashboard-menu.html' %}
+            </div>
+        </div>
+        <div class="col">
+            <div class="box mt-4" style="height: 500px;">
+
+            </div>
+        </div>
+    </div>
+{% endblock content %}
