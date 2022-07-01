@@ -9,11 +9,17 @@
                 <form>
                     <div class="mb-2">
                       <label for="exampleInputEmail1" class="form-label text-velo text-small">نام کاربری :</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div class="input-group flex-nowrap">
+                        <span class="input-group-text border-end-0" id="addon-wrapping"><i class="bi bi-person"></i></span>
+                        <input type="text" class="form-control border-start-0" aria-label="Username" aria-describedby="addon-wrapping">
+                      </div>
                     </div>
                     <div class="mb-2">
                       <label for="exampleInputPassword1" class="form-label text-velo text-small">کلمه عبور :</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" style="text-align: left;">
+                      <div class="input-group flex-nowrap">
+                        <span class="input-group-text border-end-0" id="addon-wrapping"><i class="bi bi-key"></i></span>
+                        <input type="password" class="form-control border-start-0" aria-label="password-1" aria-describedby="addon-wrapping">
+                    </div>
                     </div>
                     <div class="mb-4 form-check">
                       <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -25,16 +31,13 @@
                     <div class="d-grid gap-2 mb-4">
                         <button class="btn btn-danger" type="button">ورود با گوگل</button>
                     </div>
-                    <div class="d-grid gap-2 mb-4">
-                        <button class="btn btn-primary" type="button">ورود با استیم</button>
-                    </div>
 
                     <div class="row">
-                        <div class="col">
-                            <span><a href="">گذرواژه رو فراموش کردم!</a></span>
+                        <div class="d-grid col-7">
+                            <button class="btn btn-outline-success" type="button">گذرواژه رو فراموش کردم!</button>
                         </div>
-                        <div class="col">
-                            <span><a href="">ثبت نام ;)</a></span>
+                        <div class="d-grid col-5">
+                            <button class="btn btn-outline-success" type="button">ثبت نام</button>
                         </div>
                     </div>
                 </form>
